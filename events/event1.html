@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Erasmus+ Going Virtual - Online Methods for Youth Workers – Free European Youth e.V.</title>
-  <meta name="description" content="A 7-day international Erasmus+ youth exchange exploring digital skills, online safety, and technology for social good with youth from 5 European countries." />
+  <meta name="description" content="A training course exploring online methods for youth workers, bringing together participants from 8 countries." />
   <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -12,29 +12,35 @@
 <body>
 
   <!-- HEADER -->
- <header class="site-header">
+  <header class="site-header">
     <div class="header-inner">
-    <a href="index.html" class="logo">
-  <img src="images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;">
-      <div class="logo-text">Free European <span>Youth</span></div>
-</a>
+
+      <!-- LOGO — events klasöründe olduğu için ../ ile bir üst klasöre çıkıyoruz -->
+      <a href="../index.html" class="logo">
+        <img src="../images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;">
+        <div class="logo-text">Free European <span>Youth</span></div>
+      </a>
+
       <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="events.html">Events</a>
-        <a href="team.html">Team</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../events.html" class="active">Events</a>
+        <a href="../team.html">Team</a>
+        <a href="../gallery.html">Gallery</a>
+        <a href="../contact.html">Contact</a>
       </nav>
+
       <div class="header-social">
         <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
         <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
         <button class="hamburger"><span></span><span></span><span></span></button>
       </div>
+
     </div>
   </header>
+
 
   <!-- PAGE HEADER -->
   <section class="page-header">
@@ -45,41 +51,67 @@
           <i class="fas fa-chevron-right" style="font-size:.7rem;"></i>
           <a href="../events.html">Events</a>
           <i class="fas fa-chevron-right" style="font-size:.7rem;"></i>
-          <span>Erasmus+ Going Virtual - Online Methods for Youth Workers</span>
+          <span>Erasmus+ Going Virtual</span>
         </div>
-        <!-- EDIT EVENT TITLE HERE -->
-        <h1>Erasmus+ Going Virtual - Online Methods for Youth Workers</h1>
-        <p>An Erasmus+ international training course exploring the digital world together.</p>
+        <h1>Erasmus+ Going Virtual</h1>
+        <p>Online Methods for Youth Workers — An international Erasmus+ KA153 training course.</p>
       </div>
     </div>
   </section>
 
+
+  <!-- MAIN CONTENT -->
   <section class="section">
     <div class="container" style="max-width:900px;">
 
-      <!-- EDIT: Replace with real event photo -->
-      <!-- <img src="../images/events/digital-futures.jpg" alt="Digital Futures Youth Exchange" class="event-hero-image"> -->
- <div class="card-image">
-   <img src="../images/events/EGGKapak.png" 
-     alt="Erasmus+ Going Virtual - Online Methods for Youth Workers" 
-     style="width:100%; height:100%; object-fit:cover;">
-</div>
-
-      <!-- EDIT EVENT META HERE -->
-      <div class="event-meta-bar animate-on-scroll">
-        <div class="event-meta-item"><i class="fas fa-calendar-alt" style="color:var(--blue);"></i><span><strong>Date:</strong> 2024</span></div>
-        <div class="event-meta-item"><i class="fas fa-map-marker-alt" style="color:var(--blue);"></i><span><strong>Location:</strong> Rödental/Germany</span></div>
-        <div class="event-meta-item"><i class="fas fa-tag" style="color:var(--blue);"></i><span><strong>Type:</strong> Erasmus+ KA153</span></div>
-        <div class="event-meta-item"><i class="fas fa-users" style="color:var(--blue);"></i><span><strong>Participants:</strong> 34 youth worker</span></div>
-        <div class="event-meta-item"><i class="fas fa-globe-europe" style="color:var(--blue);"></i><span><strong>Countries:</strong> 5 E+ program (Slovenia, Poland, Turkiye, Germany, Norway) and 3 EECA partner countries (Georgia, Ukraine, Azerbaijan)</span></div>
+      <!-- KAPAK FOTOĞRAFI — tam genişlik, sabit yükseklik, ortadan kırpılır -->
+      <div style="
+        width: 100%;
+        height: 420px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 40px;
+      ">
+        <img
+          src="../images/events/EGGKapak.png"
+          alt="Erasmus+ Going Virtual - Online Methods for Youth Workers"
+          style="width:100%; height:100%; object-fit:cover; object-position:center top;"
+        >
       </div>
 
+
+      <!-- EVENT META BAR -->
+      <div class="event-meta-bar animate-on-scroll">
+        <div class="event-meta-item">
+          <i class="fas fa-calendar-alt" style="color:var(--blue);"></i>
+          <span><strong>Date:</strong> 2024</span>
+        </div>
+        <div class="event-meta-item">
+          <i class="fas fa-map-marker-alt" style="color:var(--blue);"></i>
+          <span><strong>Location:</strong> Rödental, Germany</span>
+        </div>
+        <div class="event-meta-item">
+          <i class="fas fa-tag" style="color:var(--blue);"></i>
+          <span><strong>Type:</strong> Erasmus+ KA153</span>
+        </div>
+        <div class="event-meta-item">
+          <i class="fas fa-users" style="color:var(--blue);"></i>
+          <span><strong>Participants:</strong> 34 youth workers</span>
+        </div>
+        <div class="event-meta-item">
+          <i class="fas fa-globe-europe" style="color:var(--blue);"></i>
+          <span><strong>Countries:</strong> Slovenia, Poland, Türkiye, Germany, Norway, Georgia, Ukraine, Azerbaijan</span>
+        </div>
+      </div>
+
+
+      <!-- EVENT BODY -->
       <div class="event-body animate-on-scroll">
-        <!-- EDIT EVENT CONTENT HERE -->
-        <p>The "Digital Futures" youth exchange brought together 30 young people from five European countries for a 7-day intensive programme focused on digital literacy, online safety, and how technology can be used as a tool for positive social change.</p>
+
+        <p>The training course "Erasmus+ Going Virtual – Online Methods for Youth Workers" focuses on developing innovative digital youth work practices, particularly for supporting young people at risk of social exclusion during crisis situations.</p>
 
         <h2>About the Event</h2>
-        <p>The training course “Erasmus+ Going Virtual – Online Methods for Youth Workers” focuses on developing innovative digital youth work practices, particularly for supporting young people at risk of social exclusion during crisis situations. The project brings together youth workers from different countries to explore practical online methods that create safe spaces for young people to share experiences and express their emotions.</p>
+        <p>The project brings together youth workers from different countries to explore practical online methods that create safe spaces for young people to share experiences and express their emotions.</p>
 
         <p>Participants learn about modern digital youth work tools, strengthen their skills in promoting social inclusion, and exchange good practices for working with vulnerable youth groups. The training also encourages intercultural dialogue between participants from EU and partner countries while supporting self-reflection on the needs of disadvantaged young people.</p>
 
@@ -93,11 +125,9 @@
         </ul>
 
         <h2>Impact & Outcomes</h2>
-        <p>Erasmus+ Going Virtual – Online Methods for Youth Workers training course had a significant impact on the participants, who were youth workers dealing with vulnerable young individuals. They acquired a valuable digital youth work methodology that could be applied in their future projects, particularly during times of crisis and limited face-to-face communication. Through this training, the participants enhanced their qualifications and learned a range of creative youth work methods that they could use in their daily work with their target groups.
+        <p>The training course had a significant impact on participants who work with vulnerable young individuals. They acquired a valuable digital youth work methodology applicable in future projects, particularly during times of crisis and limited face-to-face communication.</p>
 
-The project also gave participants the opportunity to exchange knowledge and experiences with peers from Program and EECA countries, helping them better understand solutions that were successful in other contexts. In addition, they improved their intercultural communication skills and strengthened their capacity to participate in future international activities.
-
-As part of the results, the project produced online methods, articles on working with vulnerable youth online, a Toolbox on Google Drive, the Erasmus+ Going Virtual Framework, and an educational video. The project also achieved strong dissemination through local activities, online and offline promotion, and the active involvement of 34 youth workers who now act as ambassadors of the project and its results.</p>
+        <p>Participants exchanged knowledge with peers from Program and EECA countries, improving intercultural communication skills and capacity for future international activities. The project produced online methods, articles on working with vulnerable youth online, a Toolbox on Google Drive, the Erasmus+ Going Virtual Framework, and an educational video. 34 youth workers now act as ambassadors of the project results.</p>
 
         <blockquote style="border-left:4px solid var(--blue);padding:16px 20px;background:var(--off-white);border-radius:0 var(--radius) var(--radius) 0;margin:24px 0;font-style:italic;color:var(--gray-800);">
           "This was the first time I felt truly at home in a group of people from different countries. The digital workshops changed how I think about my phone and social media." — Oliwia, Poland
@@ -106,19 +136,26 @@ As part of the results, the project produced online methods, articles on working
         <h2>Photos</h2>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px;">
           <!-- EDIT: Replace placeholders with real photos -->
-          <div style="aspect-ratio:1;border-radius:var(--radius);background:linear-gradient(135deg,var(--gray-100),var(--gray-200));display:flex;align-items:center;justify-content:center;font-size:2rem;">📷</div>
-          <div style="aspect-ratio:1;border-radius:var(--radius);background:linear-gradient(135deg,var(--gray-100),var(--gray-200));display:flex;align-items:center;justify-content:center;font-size:2rem;">📷</div>
-          <div style="aspect-ratio:1;border-radius:var(--radius);background:linear-gradient(135deg,var(--gray-100),var(--gray-200));display:flex;align-items:center;justify-content:center;font-size:2rem;">📷</div>
+          <!-- Example: <img src="../images/events/egg-photo1.jpg" style="width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px;"> -->
+          <div style="aspect-ratio:1;border-radius:12px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem;">📷</div>
+          <div style="aspect-ratio:1;border-radius:12px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem;">📷</div>
+          <div style="aspect-ratio:1;border-radius:12px;background:var(--gray-100);display:flex;align-items:center;justify-content:center;font-size:2rem;">📷</div>
         </div>
+
       </div>
 
+
+      <!-- NAVIGATION BUTTONS -->
       <div style="display:flex;justify-content:space-between;margin-top:48px;flex-wrap:wrap;gap:12px;" class="animate-on-scroll">
         <a href="../events.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> All Events</a>
         <a href="../contact.html" class="btn btn-primary">Get Involved <i class="fas fa-arrow-right"></i></a>
       </div>
+
     </div>
   </section>
 
+
+  <!-- CTA -->
   <section class="cta-section">
     <div class="container" style="position:relative;z-index:1;">
       <h2 class="animate-on-scroll">Interested in Participating?</h2>
@@ -130,12 +167,18 @@ As part of the results, the project produced online methods, articles on working
     </div>
   </section>
 
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
+
         <div class="footer-brand">
-         <a href="index.html" class="logo" style="margin-bottom:18px;display:inline-flex;"><img src="images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;"><div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div></a>
+          <!-- LOGO — footer'da da ../ ile üst klasöre çıkıyoruz -->
+          <a href="../index.html" class="logo" style="margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;">
+            <img src="../images/FEY logo.jpg" alt="Free European Youth e.V." style="height:40px;width:auto;">
+            <div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div>
+          </a>
           <p>A German-registered NGO connecting migrant and local youth across Europe through Erasmus+ projects since 2020.</p>
           <div class="footer-social">
             <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
@@ -143,11 +186,46 @@ As part of the results, the project produced online methods, articles on working
             <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
           </div>
         </div>
-        <div class="footer-col"><h4>Navigate</h4><div class="footer-links"><a href="../index.html">Home</a><a href="../about.html">About Us</a><a href="../projects.html">Projects</a><a href="../events.html">Events</a><a href="../team.html">Team</a><a href="../gallery.html">Gallery</a><a href="../contact.html">Contact</a></div></div>
-        <div class="footer-col"><h4>Focus Areas</h4><div class="footer-links"><a href="../about.html">Social Inclusion</a><a href="../about.html">Sustainability</a><a href="../about.html">Digital Skills</a></div></div>
-        <div class="footer-col"><h4>Contact</h4><div class="footer-links"><a href="mailto:info@freeeuropeanyouth.eu">info@freeeuropeanyouth.eu</a><a href="../contact.html">Send a message</a></div><div style="margin-top:20px;"><span class="footer-oid">OID: E10307717</span></div></div>
+
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <div class="footer-links">
+            <a href="../index.html">Home</a>
+            <a href="../about.html">About Us</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../events.html">Events</a>
+            <a href="../team.html">Team</a>
+            <a href="../gallery.html">Gallery</a>
+            <a href="../contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Focus Areas</h4>
+          <div class="footer-links">
+            <a href="../about.html">Social Inclusion</a>
+            <a href="../about.html">Sustainability</a>
+            <a href="../about.html">Digital Skills</a>
+            <a href="../about.html">Youth Employability</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-links">
+            <a href="mailto:info@freeeuropeanyouth.eu">info@freeeuropeanyouth.eu</a>
+            <a href="../contact.html">Send a message</a>
+          </div>
+          <div style="margin-top:20px;">
+            <span class="footer-oid">OID: E10307717</span>
+          </div>
+        </div>
+
       </div>
-      <div class="footer-bottom"><span>© 2025 Free European Youth e.V. All rights reserved.</span><span>Registered NGO in Germany · Erasmus+ Accredited</span></div>
+      <div class="footer-bottom">
+        <span>© 2025 Free European Youth e.V. All rights reserved.</span>
+        <span>Registered NGO in Germany · Erasmus+ Accredited</span>
+      </div>
     </div>
   </footer>
 
