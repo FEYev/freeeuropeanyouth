@@ -1598,3 +1598,12 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
  
 }
  
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 0.85rem !important;
+  }
+  
+  .logo img {
+    height: 32px !important;
+  }
+}
