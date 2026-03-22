@@ -1630,3 +1630,26 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
     height: 32px !important;
   }
 }
+/* Hamburger buton — modern yuvarlak stil */
+.hamburger {
+  background: rgba(0, 51, 153, 0.08) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  width: 42px !important;
+  height: 42px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 5px !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+}
+
+.hamburger span {
+  width: 20px !important;
+  height: 2px !important;
+  background: var(--blue) !important;
+  border-radius: 2px !important;
+  display: block !important;
+}
