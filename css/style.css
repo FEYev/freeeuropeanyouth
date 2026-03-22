@@ -1398,3 +1398,203 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
   .header-social { display: none; }
   .cta-buttons  { flex-direction: column; align-items: center; }
 }
+@media (max-width: 768px) {
+ 
+  /* --- HERO BUTONLARI --- */
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+ 
+  .hero-cta .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+ 
+  /* --- İSTATİSTİK KARTLARI --- */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+ 
+  .stat-card {
+    min-width: unset;
+    width: 100%;
+  }
+ 
+  /* --- HERO YAZI BOYUTU --- */
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+ 
+  .hero p {
+    font-size: 1rem;
+  }
+ 
+  /* --- HERO BADGE --- */
+  .hero-badge {
+    font-size: 0.72rem;
+    padding: 6px 12px;
+    white-space: normal;
+    text-align: center;
+  }
+ 
+  /* --- HAMBURGER MENÜ --- */
+  .hamburger {
+    display: flex !important;
+  }
+ 
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    padding: 16px 24px 24px;
+    border-bottom: 1px solid #d8dce9;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    z-index: 999;
+    gap: 4px;
+  }
+ 
+  .main-nav.open {
+    display: flex !important;
+  }
+ 
+  .main-nav a {
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+ 
+  /* Sosyal ikonları headerda gizle — menüde zaten var */
+  .header-social .social-icon {
+    display: none;
+  }
+ 
+  /* Hamburger her zaman görünsün */
+  .header-social .hamburger {
+    display: flex !important;
+  }
+ 
+  /* --- GENEL SAYFA PADDİNG --- */
+  .container {
+    padding: 0 16px;
+  }
+ 
+  .section {
+    padding: 48px 0;
+  }
+ 
+  /* --- SECTION HEADER --- */
+  .section-header h2 {
+    font-size: 1.6rem;
+  }
+ 
+  /* --- KARTLAR TEK SÜTUN --- */
+  .grid-3,
+  .grid-2,
+  .grid-4,
+  .pillars-grid,
+  .team-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  /* --- PROJE KARTLARI --- */
+  .project-info {
+    flex-direction: column;
+    gap: 8px;
+  }
+ 
+  /* --- İLETİŞİM FORMU --- */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+ 
+  /* --- FOOTER --- */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+ 
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    font-size: 0.78rem;
+  }
+ 
+  /* --- PAGE HEADER --- */
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+ 
+  /* --- EVENT META BAR --- */
+  .event-meta-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+ 
+  /* --- ERASMUS BANNER --- */
+  .erasmus-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 28px 20px;
+  }
+ 
+  /* --- ABOUT GRID --- */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+ 
+  .about-badge {
+    right: 0;
+    bottom: -12px;
+  }
+ 
+  /* --- CTA BUTONLARI --- */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+ 
+}
+ 
+/* Küçük telefonlar için ek düzeltmeler */
+@media (max-width: 400px) {
+ 
+  .hero h1 {
+    font-size: 1.9rem;
+  }
+ 
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  .stat-number {
+    font-size: 1.6rem;
+  }
+ 
+  .logo-text {
+    display: none; /* Çok küçük ekranda sadece logo ikonu görünsün */
+  }
+ 
+}
+ 
