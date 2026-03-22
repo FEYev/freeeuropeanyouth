@@ -209,29 +209,31 @@
     </div>
   </footer>
 
-  <script src="js/events-data.js"></script>
+ <script src="js/events-data.js"></script>
   <script src="js/script.js"></script>
   <script>
-    // Ana sayfada ilk 3 eventi göster
-    const latestGrid = document.getElementById('latestEventsGrid');
-    eventsData.slice(0, 3).forEach(event => {
-      latestGrid.innerHTML += `
-        <div class="card animate-on-scroll">
-          <div class="card-image">
-            <img src="${event.image}" alt="${event.title}" style="width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="card-body">
-            <span class="card-tag ${event.tagClass}">${event.tag}</span>
-            <div class="card-meta">
-              <span><i class="fas fa-calendar"></i> ${event.date}</span>
-              <span><i class="fas fa-map-marker-alt"></i> ${event.location}</span>
-            </div>
-            <h3>${event.title}</h3>
-            <p>${event.description}</p>
-            <a href="${event.link}" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>`;
-    });
+    var grid = document.getElementById('eventsGrid');
+    if (grid && typeof eventsData !== 'undefined') {
+      eventsData.forEach(function(ev) {
+        var card = document.createElement('div');
+        card.className = 'card animate-on-scroll';
+        card.innerHTML =
+          '<div class="card-image"><img src="' + ev.image + '" alt="' + ev.title + '" style="width:100%;height:100%;object-fit:cover;"></div>' +
+          '<div class="card-body">' +
+          '<span class="card-tag ' + ev.tagClass + '">' + ev.tag + '</span>' +
+          '<div class="card-meta">' +
+          '<span><i class="fas fa-calendar"></i> ' + ev.date + '</span>' +
+          '<span><i class="fas fa-map-marker-alt"></i> ' + ev.location + '</span>' +
+          '</div>' +
+          '<h3>' + ev.title + '</h3>' +
+          '<p>' + ev.description + '</p>' +
+          '<a href="' + ev.link + '" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>' +
+          '</div>';
+        grid.appendChild(card);
+      });
+    } else {
+      grid.innerHTML = '<p style="color:red;">events-data.js yuklenemedi!</p>';
+    }
   </script>
 </body>
 </html>
