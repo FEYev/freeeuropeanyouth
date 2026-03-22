@@ -15,9 +15,9 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <img src="images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;">
+  <img src="images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;">
         <div class="logo-text">Free European <span>Youth</span></div>
-      </a>
+</a>
       <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -51,24 +51,182 @@
     </div>
   </section>
 
-  <!-- EVENTS GRID — otomatik doldurulur -->
+
+  <!-- ============================================================
+       EVENTS GRID
+       HOW TO ADD A NEW EVENT:
+         1. Copy one .card div block below
+         2. Edit the title, date, location, description
+         3. Change the emoji placeholder or add an <img> tag
+         4. Change the tag type (tag-erasmus / tag-workshop / tag-event / tag-mobility)
+         5. Update the href link to point to your new event file
+       ============================================================ -->
   <section class="section">
     <div class="container">
+
+      <!-- UPCOMING EVENTS -->
       <div class="section-header animate-on-scroll">
-        <span class="section-label">Our Activities</span>
-        <h2>All Events</h2>
+        <span class="section-label">What's Coming</span>
+        <h2>Upcoming Events</h2>
       </div>
 
-      <!-- Eventler buraya JavaScript tarafından eklenir -->
-      <div class="grid-3" id="eventsGrid"></div>
+      <div class="grid-3" style="margin-bottom:64px;">
+
+        <!-- UPCOMING EVENT CARD — EDIT HERE -->
+        <div class="card animate-on-scroll delay-1">
+          <div class="card-image">
+            <!-- EDIT: Replace with event photo: <img src="../images/events/event3.jpg" alt="Event Name"> -->
+            <div class="card-image-placeholder">🌍</div>
+          </div>
+          <div class="card-body">
+            <!-- EDIT EVENT TAG HERE (options: tag-erasmus, tag-workshop, tag-event, tag-mobility) -->
+            <span class="card-tag tag-erasmus">Erasmus+</span>
+            <!-- EDIT EVENT META HERE -->
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> Summer 2025</span>
+              <span><i class="fas fa-map-marker-alt"></i> Germany</span>
+            </div>
+            <!-- EDIT EVENT TITLE HERE -->
+            <h3>International Youth Exchange 2025</h3>
+            <!-- EDIT EVENT DESCRIPTION HERE -->
+            <p>An upcoming international youth exchange bringing together participants from across Europe to explore themes of inclusion and sustainability.</p>
+            <!-- EDIT LINK HERE — point to an events/eventX.html file -->
+            <a href="contact.html" class="card-link">Register interest <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ADD MORE UPCOMING EVENT CARDS HERE -->
+
+      </div>
+
+
+      <!-- PAST EVENTS -->
+      <div class="section-header animate-on-scroll">
+        <span class="section-label">Our Activities</span>
+        <h2>Past Events</h2>
+      </div>
+
+      <div class="grid-3">
+
+        <!-- PAST EVENT CARD 1 — EDIT HERE -->
+        <div class="card animate-on-scroll delay-1">
+          <div class="card-image">
+            <!-- EDIT: <img src="../images/events/event1.jpg" alt="Digital Futures"> -->
+       <img src="images/events/EGGKapak.png" alt="Erasmus+ Going Virtual">
+          </div>
+          <div class="card-body">
+            <span class="card-tag tag-erasmus">Erasmus+</span>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> 2024</span>
+              <span><i class="fas fa-map-marker-alt"></i> Rödental/Germany</span>
+            </div>
+            <!-- EDIT EVENT TITLE HERE -->
+            <h3>Erasmus+ Going Virtual - Online Methods for Youth Workers</h3>
+            <p>A 7-day international exchange exploring digital skills, online safety, and tech for social good with youth from 5 countries.</p>
+            <!-- EDIT LINK HERE -->
+            <a href="events/event1.html" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- PAST EVENT CARD 2 — EDIT HERE -->
+        <div class="card animate-on-scroll delay-2">
+          <div class="card-image">
+            <!-- EDIT: <img src="../images/events/event2.jpg" alt="Green Workshop"> -->
+          <img src="images/events/DPE.jpg" alt="Digital Practices on Environmental Activities">
+          </div>
+          <div class="card-body">
+            <span class="card-tag tag-workshop">Workshop</span>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> 2025</span>
+              <span><i class="fas fa-map-marker-alt"></i> Online</span>
+            </div>
+            <!-- EDIT EVENT TITLE HERE -->
+            <h3>Digital Practices on Environmental Activities</h3>
+            <p>Interactive workshop on exploring how digital tools and technologies can enhance nature conservation efforts.</p>
+            <a href="events/event2.html" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- PAST EVENT CARD 3 — EDIT HERE -->
+        <div class="card animate-on-scroll delay-3">
+          <div class="card-image">
+            <img src="images/events/WB.jpg" alt="WEBINAR - Digital Tools to Learn German">
+          </div>
+          <div class="card-body">
+            <span class="card-tag tag-event">WEBINAR</span>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> 2025</span>
+              <span><i class="fas fa-map-marker-alt"></i> Online</span>
+            </div>
+            <h3>WEBINAR - Digital Tools to Learn German</h3>
+            <p>A free webinar on learning German with digital tools</p>
+            <a href="events/event3.html" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- PAST EVENT CARD 4 — EDIT HERE -->
+        <div class="card animate-on-scroll delay-1">
+          <div class="card-image">
+               <img src="images/events/CC.png" alt="Climate Crisis">
+          </div>
+         <div class="card-body">
+            <span class="card-tag tag-erasmus">Erasmus+</span>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> 2022</span>
+              <span><i class="fas fa-map-marker-alt"></i> Rödental/Germany</span>
+            </div>
+            <h3>Climate Crisis</h3>
+            <p>International youth mobility activities as part of our first Erasmus+ KA152 project, connecting youth from multiple countries.</p>
+            <a href="events/event4.html" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- PAST EVENT CARD 5 — EDIT HERE -->
+        <div class="card animate-on-scroll delay-2">
+          <div class="card-image">
+            <div class="card-image-placeholder">❤️</div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag tag-workshop">Well-being</span>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> 2023</span>
+              <span><i class="fas fa-map-marker-alt"></i> Germany</span>
+            </div>
+            <h3>Well-being & Healthy Lifestyle Session</h3>
+            <p>A series of workshops on mental health awareness, healthy habits, and resilience for young people navigating challenges.</p>
+            <a href="events.html" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- PAST EVENT CARD 6 — EDIT HERE -->
+        <div class="card animate-on-scroll delay-3">
+          <div class="card-image">
+            <div class="card-image-placeholder">🎭</div>
+          </div>
+          <div class="card-body">
+            <span class="card-tag tag-event">Cultural</span>
+            <div class="card-meta">
+              <span><i class="fas fa-calendar"></i> 2022</span>
+              <span><i class="fas fa-map-marker-alt"></i> Germany</span>
+            </div>
+            <h3>Intercultural Dialogue Evening</h3>
+            <p>An open community event celebrating diverse cultures through food, music, storytelling, and shared experiences.</p>
+            <a href="events.html" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- ADD NEW EVENT CARD HERE — copy any card above and edit -->
+
+      </div>
     </div>
   </section>
+
 
   <!-- CTA -->
   <section class="cta-section">
     <div class="container" style="position:relative;z-index:1;">
       <h2 class="animate-on-scroll">Want to Join an Activity?</h2>
-      <p class="animate-on-scroll delay-1">Get in touch to learn more about upcoming events or express your interest.</p>
+      <p class="animate-on-scroll delay-1">Get in touch to learn more about upcoming events or express your interest in participating.</p>
       <div class="cta-buttons animate-on-scroll delay-2">
         <a href="contact.html" class="btn btn-white"><i class="fas fa-envelope"></i> Contact Us</a>
         <a href="projects.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff;"><i class="fas fa-project-diagram"></i> Our Projects</a>
@@ -76,15 +234,13 @@
     </div>
   </section>
 
+
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo" style="margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;">
-            <img src="images/FEY logo.jpg" alt="Free European Youth e.V." style="height:40px;width:auto;">
-            <div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div>
-          </a>
+          <a href="index.html" class="logo" style="margin-bottom:18px;display:inline-flex;"><img src="images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;"><div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div></a>
           <p>A German-registered NGO connecting migrant and local youth across Europe through Erasmus+ projects since 2020.</p>
           <div class="footer-social">
             <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
@@ -93,38 +249,13 @@
           </div>
         </div>
         <div class="footer-col"><h4>Navigate</h4><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="projects.html">Projects</a><a href="events.html">Events</a><a href="team.html">Team</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></div></div>
-        <div class="footer-col"><h4>Focus Areas</h4><div class="footer-links"><a href="about.html">Social Inclusion</a><a href="about.html">Sustainability</a><a href="about.html">Digital Skills</a><a href="about.html">Youth Employability</a></div></div>
+        <div class="footer-col"><h4>Focus Areas</h4><div class="footer-links"><a href="about.html">Social Inclusion</a><a href="about.html">Sustainability</a><a href="about.html">Digital Skills</a><a href="about.html">Youth Employability</a><a href="about.html">Well-being</a></div></div>
         <div class="footer-col"><h4>Contact</h4><div class="footer-links"><a href="mailto:info@freeeuropeanyouth.eu">info@freeeuropeanyouth.eu</a><a href="contact.html">Send a message</a></div><div style="margin-top:20px;"><span class="footer-oid">OID: E10307717</span></div></div>
       </div>
       <div class="footer-bottom"><span>© 2025 Free European Youth e.V. All rights reserved.</span><span>Registered NGO in Germany · Erasmus+ Accredited</span></div>
     </div>
   </footer>
 
-<script src="js/events-data.js"></script>
   <script src="js/script.js"></script>
-  <script>
-    var grid = document.getElementById('eventsGrid');
-    if (grid && typeof eventsData !== 'undefined') {
-      eventsData.forEach(function(ev) {
-        var card = document.createElement('div');
-        card.className = 'card animate-on-scroll';
-        card.innerHTML =
-          '<div class="card-image"><img src="' + ev.image + '" alt="' + ev.title + '" style="width:100%;height:100%;object-fit:cover;"></div>' +
-          '<div class="card-body">' +
-          '<span class="card-tag ' + ev.tagClass + '">' + ev.tag + '</span>' +
-          '<div class="card-meta">' +
-          '<span><i class="fas fa-calendar"></i> ' + ev.date + '</span>' +
-          '<span><i class="fas fa-map-marker-alt"></i> ' + ev.location + '</span>' +
-          '</div>' +
-          '<h3>' + ev.title + '</h3>' +
-          '<p>' + ev.description + '</p>' +
-          '<a href="' + ev.link + '" class="card-link">Read more <i class="fas fa-arrow-right"></i></a>' +
-          '</div>';
-        grid.appendChild(card);
-      });
-    } else {
-      grid.innerHTML = '<p style="color:red;">events-data.js yuklenemedi!</p>';
-    }
-  </script>
 </body>
 </html>
