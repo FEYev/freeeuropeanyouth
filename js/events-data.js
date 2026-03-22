@@ -8,8 +8,6 @@
    ============================================================ */
 
 const eventsData = [
-
-  /* ---- EVENT 1 ---- */
   {
     title:       "Erasmus+ Going Virtual – Online Methods for Youth Workers",
     date:        "2024",
@@ -20,8 +18,6 @@ const eventsData = [
     image:       "images/events/EGGKapak.png",
     link:        "events/event1.html"
   },
-
-  /* ---- EVENT 2 ---- */
   {
     title:       "Digital Practices on Environmental Activities",
     date:        "May 18, 2025",
@@ -32,8 +28,6 @@ const eventsData = [
     image:       "images/events/DPE.jpg",
     link:        "events/event2.html"
   },
-
-  /* ---- EVENT 3 ---- */
   {
     title:       "Webinar – Digital Tools to Learn German",
     date:        "February 21, 2025",
@@ -44,8 +38,6 @@ const eventsData = [
     image:       "images/events/WB.jpg",
     link:        "events/event3.html"
   },
-
-  /* ---- EVENT 4 ---- */
   {
     title:       "Climate Crisis",
     date:        "2022",
@@ -55,7 +47,8 @@ const eventsData = [
     description: "A KA152 youth exchange bringing together 41 young people from 5 countries to raise awareness about climate change, water sustainability, and responsible environmental behaviour.",
     image:       "images/events/CC.png",
     link:        "events/event4.html"
-  },
+  }
+];
 
   /* ============================================================
      YENİ EVENT EKLEMEK İÇİN BURAYA KOPYALAYIN:
