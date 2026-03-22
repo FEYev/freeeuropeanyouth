@@ -1,12 +1,3 @@
-/* ============================================================
-   EVENTS-DATA.JS — TÜM EVENTLERİ BURADAN YÖNETİN
-   
-   YENİ EVENT EKLEMEK İÇİN:
-   1. Aşağıdaki listeye yeni bir { } bloğu kopyalayın
-   2. Bilgileri doldurun
-   3. Kaydedin — hem ana sayfa hem events sayfası otomatik güncellenir!
-   ============================================================ */
-
 const eventsData = [
   {
     title:       "Erasmus+ Going Virtual – Online Methods for Youth Workers",
@@ -48,27 +39,4 @@ const eventsData = [
     image:       "images/events/CC.png",
     link:        "events/event4.html"
   }
-];
-
-  /* ============================================================
-     YENİ EVENT EKLEMEK İÇİN BURAYA KOPYALAYIN:
-
-  {
-    title:       "Event Başlığı",
-    date:        "Tarih",
-    location:    "Şehir, Ülke",
-    tag:         "Erasmus+",
-    tagClass:    "tag-erasmus",
-    description: "Kısa açıklama (1-2 cümle).",
-    image:       "images/events/kapak-foto.jpg",
-    link:        "events/event5.html"
-  },
-
-  tagClass seçenekleri:
-    tag-erasmus  → mavi  (Erasmus+ projeleri için)
-    tag-workshop → yeşil (workshoplar için)
-    tag-event    → sarı  (webinar/etkinlik için)
-    tag-mobility → mavi  (mobilite için)
-  ============================================================ */
-
 ];
