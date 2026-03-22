@@ -1607,3 +1607,26 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
     height: 32px !important;
   }
 }
+@media (max-width: 768px) {
+  .header-social {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .header-social .social-icon {
+    display: none !important;
+  }
+
+  .header-social .hamburger {
+    display: flex !important;
+  }
+
+  .logo-text {
+    font-size: 0.82rem !important;
+    line-height: 1.2;
+  }
+
+  .logo img {
+    height: 32px !important;
+  }
+}
