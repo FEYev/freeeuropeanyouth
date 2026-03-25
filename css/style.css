@@ -1674,3 +1674,8 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
 .pillar-card p {
   margin-top: auto;
 }
+
+.pillar-card {
+  display: flex;
+  flex-direction: column;
+}
