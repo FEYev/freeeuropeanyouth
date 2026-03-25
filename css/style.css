@@ -1658,26 +1658,6 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
   .hamburger {
     display: none !important;
   }
-}
-.pillar-card {
-  min-height: 220px;
-}
-body {
-  overflow-x: hidden;
-}
-
-.section-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-}
-
-.section-header p {
-  text-align: center;
-  margin: 0 auto;
-}
 
 .pillar-card, .team-card {
   display: flex;
@@ -1685,12 +1665,3 @@ body {
   height: 100%;
   overflow: hidden;
   word-wrap: break-word;
-}
-/* EKLENECEK YENI DUZELTME KODU */
-body { overflow-x: hidden; }
-.section-header { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; }
-.section-header p { text-align: center; margin: 0 auto; }
-.pillar-card, .team-card, .card { display: flex; flex-direction: column; height: 100%; word-wrap: break-word; }
-.card-image { flex-shrink: 0; }
-.card-body { flex-grow: 1; }
-@media (max-width: 1200px) { .grid-4 { grid-template-columns: repeat(2, 1fr) !important; gap: 30px; } }
