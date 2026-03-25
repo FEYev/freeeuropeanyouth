@@ -1671,3 +1671,6 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
 .team-bio {
   text-align: center;
 }
+.pillar-card p {
+  margin-top: auto;
+}
