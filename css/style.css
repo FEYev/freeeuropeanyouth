@@ -1659,3 +1659,15 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
     display: none !important;
   }
 }
+/* Focus areas metin hizalama */
+.pillar-card h3,
+.pillar-card p {
+  text-align: center;
+}
+
+/* Team card metin hizalama */
+.team-card h3,
+.team-role,
+.team-bio {
+  text-align: center;
+}
