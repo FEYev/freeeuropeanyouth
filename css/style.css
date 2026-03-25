@@ -1679,7 +1679,7 @@ body {
   margin: 0 auto;
 }
 
-.pillar-card, .team-card, .card {
+.pillar-card, .team-card {
   display: flex;
   flex-direction: column;
   height: 100%;
