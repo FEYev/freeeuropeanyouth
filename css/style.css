@@ -93,28 +93,11 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
 
 .section-header {
   margin-bottom: 56px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Her şeyi yatayda ortalar */
-  text-align: center;   /* Yazıları merkeze alır */
 }
 
-.section-header h2 { 
-  margin-bottom: 1rem; 
-  width: 100%;
-}
+.section-header h2 { margin-bottom: 0.6rem; }
+.section-header p  { color: var(--gray-500); max-width: 560px; font-size: 1.1rem; }
 
-.section-header p { 
-  color: var(--gray-500); 
-  max-width: 560px; 
-  font-size: 1.1rem; 
-  margin: 0 auto; /* Paragrafı kutunun ortasına çeker */
-}
-
-.section-label {
-  display: inline-block;
-  margin: 0 auto 1rem auto; /* Üstteki Activities yazısını ortalar */
-}
 .text-center { text-align: center; }
 .text-center .section-header p { margin: 0 auto; }
 
