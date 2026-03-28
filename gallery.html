@@ -3,36 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery – Free European Youth e.V.</title>
-  <meta name="description" content="Photos from our events, workshops, and activities across Europe." />
+  <title>Free European Youth e.V. – Empowering Youth Across Europe</title>
+  <meta name="description" content="Free European Youth e.V. is a German NGO promoting youth empowerment, social inclusion, sustainability, and intercultural exchange through Erasmus+ projects." />
+  <meta name="keywords" content="Free European Youth, Erasmus+, NGO, youth empowerment, inclusion, Germany" />
+  <meta property="og:title" content="Free European Youth e.V." />
+  <meta property="og:description" content="Empowering youth across Europe through non-formal education and Erasmus+ projects." />
+  <meta property="og:type" content="website" />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+ 
+  <style>
+    /* Dil seçici */
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid var(--gray-200);
+      background: var(--white);
+      color: var(--gray-800);
+      transition: all 0.25s;
+      text-decoration: none;
+    }
+    .lang-btn:hover,
+    .lang-btn.active {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--gray-100);
+    }
+    /* Mobilde hamburger menü içindeki dil seçici */
+    .lang-switcher-mobile {
+      display: none;
+      margin-top: 8px;
+      padding-top: 12px;
+      border-top: 1px solid var(--gray-200);
+    }
+    @media (max-width: 768px) {
+      .lang-switcher-desktop { display: none !important; }
+      .lang-switcher-mobile  { display: flex !important; }
+    }
+    /* Google Translate çubuğunu gizle */
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+  </style>
 </head>
 <body>
-
+ 
+  <!-- Google Translate container — gizli, zorunlu -->
+  <div id="gt-container" style="display:none;"></div>
+ 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-     <a href="index.html" class="logo">
-  <img src="images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;">
-       <div class="logo-text">Free European <span>Youth</span></div>
-</a>
-      <nav class="main-nav">
+ 
+      <!-- LOGO -->
+      <a href="index.html" class="logo">
+        <img src="images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;">
+        <div class="logo-text">Free European <span>Youth</span></div>
+      </a>
+ 
+      <!-- NAVIGATION -->
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="events.html">Events</a>
         <a href="team.html">Team</a>
-        <a href="gallery.html" class="active">Gallery</a>
+        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
+        <!-- Mobilde menü içinde dil seçici -->
+        <div class="lang-switcher lang-switcher-mobile">
+          <a href="#" class="lang-btn active" id="btn-en-m" onclick="switchLang('en');return false;">🇬🇧 EN</a>
+          <a href="#" class="lang-btn" id="btn-de-m" onclick="switchLang('de');return false;">🇩🇪 DE</a>
+        </div>
       </nav>
+ 
+      <!-- SOSYAL + HAMBURGER + PC DIL SEÇİCİ -->
       <div class="header-social">
+        <!-- PC'de dil seçici -->
+        <div class="lang-switcher lang-switcher-desktop">
+          <a href="#" class="lang-btn active" id="btn-en" onclick="switchLang('en');return false;">🇬🇧 EN</a>
+          <a href="#" class="lang-btn" id="btn-de" onclick="switchLang('de');return false;">🇩🇪 DE</a>
+        </div>
         <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
         <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-        <button class="hamburger"><span></span><span></span><span></span></button>
+        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
+ 
     </div>
   </header>
 
