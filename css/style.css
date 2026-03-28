@@ -1691,3 +1691,47 @@ body {
 .text-center .section-header p {
   margin: 0 auto;
 }
+/* Dil seçici */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 2px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-800);
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+  border-color: var(--blue);
+  color: var(--blue);
+  background: var(--gray-100);
+}
+
+.lang-btn .flag {
+  font-size: 1rem;
+}
+
+/* Mobilde hamburger menü içinde */
+@media (max-width: 768px) {
+  .lang-switcher {
+    margin: 8px 16px 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--gray-200);
+  }
+}
