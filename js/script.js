@@ -127,3 +127,43 @@ if (contactForm) {
     if (e.key === 'ArrowRight') document.getElementById('lbNext').click();
   });
 })();
+
+/* -------- DİL DEĞİŞTİRİCİ -------- */
+function switchLang(lang) {
+  // Buton görünümünü güncelle
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+
+  // Google Translate ile çevir
+  if (lang === 'de') {
+    if (!document.getElementById('gt-script')) {
+      // Google Translate'i yükle
+      var s = document.createElement('script');
+      s.id = 'gt-script';
+      s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit';
+      document.body.appendChild(s);
+
+      window.googleTranslateInit = function() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'de',
+          autoDisplay: true,
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'gt-container');
+        // Otomatik Almancaya geç
+        setTimeout(function() {
+          var sel = document.querySelector('.goog-te-combo');
+          if (sel) { sel.value = 'de'; sel.dispatchEvent(new Event('change')); }
+        }, 1000);
+      };
+    } else {
+      // Zaten yüklüyse direkt geç
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) { sel.value = 'de'; sel.dispatchEvent(new Event('change')); }
+    }
+  } else {
+    // İngilizceye dön
+    var sel = document.querySelector('.goog-te-combo');
+    if (sel) { sel.value = 'en'; sel.dispatchEvent(new Event('change')); }
+  }
+}
