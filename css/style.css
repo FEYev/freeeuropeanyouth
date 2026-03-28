@@ -1667,11 +1667,7 @@ body {
 }
 
 .section-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
+  margin-bottom: 56px;
 }
 
 .section-header p {
@@ -1685,4 +1681,13 @@ body {
   height: 100%;
   overflow: hidden;
   word-wrap: break-word;
+}
+/* Sadece ortalanması gereken section-header'lar için */
+.text-center .section-header {
+  text-align: center;
+  align-items: center;
+}
+
+.text-center .section-header p {
+  margin: 0 auto;
 }
