@@ -36,40 +36,6 @@
       background: var(--gray-100);
     }
 
-    /* CSS bayraklar — font bağımsız, her tarayıcıda çalışır */
-    .flag-icon {
-      display: inline-block;
-      width: 18px;
-      height: 13px;
-      border-radius: 2px;
-      overflow: hidden;
-      flex-shrink: 0;
-      vertical-align: middle;
-      position: relative;
-    }
-    .flag-gb {
-      background: #012169;
-    }
-    .flag-gb::before {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        linear-gradient(to bottom right, transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px)),
-        linear-gradient(to bottom left,  transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px));
-    }
-    .flag-gb::after {
-      content: '';
-      position: absolute; inset: 0;
-      background:
-        linear-gradient(to bottom right, transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
-        linear-gradient(to bottom left,  transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
-        linear-gradient(#fff 0 0) center / 4px 100% no-repeat,
-        linear-gradient(#fff 0 0) center / 100% 4px no-repeat;
-    }
-    .flag-de {
-      background: linear-gradient(to bottom, #000 33.3%, #D00 33.3% 66.6%, #FFCE00 66.6%);
-    }
-
     /* Mobilde hamburger içi dil seçici */
     .lang-switcher-mobile {
       display: none;
@@ -151,10 +117,10 @@
         <!-- Mobil hamburger içinde bayraklı dil seçici -->
         <div class="lang-switcher lang-switcher-mobile">
           <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')">
-            <span class="flag-icon flag-gb"></span> EN
+            <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')">🇬🇧 EN</button>
           </button>
           <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')">
-            <span class="flag-icon flag-de"></span> DE
+            <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')">🇩🇪 DE</button>
           </button>
         </div>
       </nav>
@@ -164,10 +130,10 @@
         <!-- PC'de bayraklı dil seçici -->
         <div class="lang-switcher lang-switcher-desktop">
           <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">
-            <span class="flag-icon flag-gb"></span> EN
+            <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">🇬🇧 EN</button>
           </button>
           <button class="lang-btn" id="btn-de" onclick="switchLang('de')">
-            <span class="flag-icon flag-de"></span> DE
+            <button class="lang-btn" id="btn-de" onclick="switchLang('de')">🇩🇪 DE</button>
           </button>
         </div>
         <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
