@@ -8,11 +8,10 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-<style>
-    /* ── DİL SEÇİCİ ── */
+ 
+  <style>
+    /* Dil seçici */
     .lang-switcher { display:flex; align-items:center; gap:6px; }
-
     .lang-btn {
       display: inline-flex;
       align-items: center;
@@ -35,8 +34,6 @@
       color: var(--blue);
       background: var(--gray-100);
     }
-
-    /* Mobilde hamburger içi dil seçici */
     .lang-switcher-mobile {
       display: none;
       margin-top: 8px;
@@ -47,94 +44,48 @@
       .lang-switcher-desktop { display: none !important; }
       .lang-switcher-mobile  { display: flex !important; }
     }
-
-    /* Google Translate araç çubuğunu gizle */
+    /* Google Translate çubuğunu gizle */
     .goog-te-banner-frame, .skiptranslate { display: none !important; }
     body { top: 0 !important; }
-
-    /* ── HEADER'I KÖŞELERE YAY ── */
-    .header-inner {
-      max-width: 100% !important;
-      padding-left: 48px !important;
-      padding-right: 48px !important;
-    }
-    @media (max-width: 768px) {
-      .header-inner {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-      }
-    }
-
-    /* Logo "Youth" span rengi */
-    .logo .logo-text span { color: #d4a017 !important; }
-
-    /* Header sosyal ikonlar — renkli yuvarlak */
-    .header-social .social-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      color: #fff !important;
-      text-decoration: none;
-      transition: transform 0.18s, opacity 0.18s;
-    }
-    .header-social .social-icon:hover { transform: scale(1.1); opacity: 0.88; }
-    .header-social .social-icon.yt { background: #ff0000; }
-    .header-social .social-icon.ig { background: linear-gradient(135deg,#f09433,#dc2743,#bc1888); }
-    .header-social .social-icon.fb { background: #1877f2; }
   </style>
 </head>
 <body>
-
-  <!-- Google Translate container — gizli, zorunlu -->
+ 
+  <!-- Google Translate container -->
   <div id="gt-container" style="display:none;"></div>
-
+ 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-
+ 
       <!-- LOGO -->
-      <a href="events.html" class="logo">
-  <img 
-    src="images/FEY.png" 
-    alt="Free European Youth e.V." 
-    style="height:44px; width:44px; border-radius:50%; object-fit:cover;">
-  <div class="logo-text">Free European <span>Youth e.V.</span></div>
-</a>
-
+      <a href="index.html" class="logo">
+        <img src="images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:44px;border-radius:50%;object-fit:cover;">
+        <div class="logo-text">Free European <span>Youth</span></div>
+      </a>
+ 
       <!-- NAVIGATION -->
       <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="events.html">Events</a>
-        <a href="team.html">Team</a>
+        <a href="team.html" class="active">Team</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
-        <!-- Mobil hamburger içinde bayraklı dil seçici -->
+        <!-- Mobilde hamburger içinde dil seçici -->
         <div class="lang-switcher lang-switcher-mobile">
-          <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')">
-            <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')">🇬🇧 EN</button>
-          </button>
-          <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')">
-            <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')">🇩🇪 DE</button>
-          </button>
+          <a href="#" class="lang-btn active" id="btn-en-m" onclick="switchLang('en');return false;">🇬🇧 EN</a>
+          <a href="#" class="lang-btn" id="btn-de-m" onclick="switchLang('de');return false;">🇩🇪 DE</a>
         </div>
       </nav>
-
-      <!-- SOSYAL + HAMBURGER + PC DİL SEÇİCİ -->
-      <div class="header-social" style="display:flex;align-items:center;gap:10px;">
-        <!-- PC'de bayraklı dil seçici -->
+ 
+      <!-- SOSYAL + PC DİL SEÇİCİ + HAMBURGER -->
+      <div class="header-social">
+        <!-- PC'de dil seçici -->
         <div class="lang-switcher lang-switcher-desktop">
-          <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">
-            <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">🇬🇧 EN</button>
-          </button>
-          <button class="lang-btn" id="btn-de" onclick="switchLang('de')">
-            <button class="lang-btn" id="btn-de" onclick="switchLang('de')">🇩🇪 DE</button>
-          </button>
+          <a href="#" class="lang-btn active" id="btn-en" onclick="switchLang('en');return false;">🇬🇧 EN</a>
+          <a href="#" class="lang-btn" id="btn-de" onclick="switchLang('de');return false;">🇩🇪 DE</a>
         </div>
         <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
         <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
@@ -143,10 +94,10 @@
           <span></span><span></span><span></span>
         </button>
       </div>
-
+ 
     </div>
   </header>
-  
+   
 
   <!-- PAGE HEADER -->
   <section class="page-header">
