@@ -286,7 +286,7 @@
           <h3 style="margin-bottom:8px;">Send Us a Message</h3>
           <p style="color:var(--gray-500);font-size:.9rem;margin-bottom:28px;">Fill in the form below and we'll get back to you as soon as possible.</p>
 
-          <form id="contactForm" novalidate>
+          <form id="contactForm" action="https://formspree.io/f/xkopzekw" method="POST">
             <div class="form-row">
               <!-- EDIT FORM FIELDS HERE if needed -->
               <div class="form-group">
@@ -338,27 +338,6 @@
           </form>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-
-  <!-- For real form handling, add Formspree tip -->
-  <section class="section" style="padding-top:0;">
-    <div class="container">
-      <div style="background:var(--off-white);border-radius:var(--radius);padding:20px 24px;display:flex;align-items:flex-start;gap:14px;" class="animate-on-scroll">
-        <i class="fas fa-info-circle" style="color:var(--blue);font-size:1.1rem;margin-top:2px;flex-shrink:0;"></i>
-        <div>
-          <strong style="font-family:var(--font-head);font-size:.9rem;">For a working contact form:</strong>
-          <p style="font-size:.88rem;color:var(--gray-500);margin-top:4px;">
-            To make this form send real emails, sign up at
-            <a href="https://formspree.io" target="_blank" rel="noopener" style="color:var(--blue);">Formspree.io</a>
-            (free plan available), get your form endpoint URL, and replace the
-            <code style="background:var(--gray-100);padding:1px 6px;border-radius:4px;">id="contactForm"</code>
-            form's <code style="background:var(--gray-100);padding:1px 6px;border-radius:4px;">action</code> attribute with it.
-            Alternatively, use <a href="https://www.emailjs.com/" target="_blank" style="color:var(--blue);">EmailJS</a> for a fully free solution.
-          </p>
-        </div>
       </div>
     </div>
   </section>
