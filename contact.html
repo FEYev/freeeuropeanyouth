@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
  
   <style>
-    /* ── DİL SEÇİCİ ── */
     .lang-switcher { display:flex; align-items:center; gap:6px; }
 
     .lang-btn {
@@ -328,11 +327,58 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script src="js/script.js"></script>
 
   <script>
-    emailjs.init("0EIfzAKsRnhxxWaw8");
+    // EmailJS basit API çağrısı - CDN'ye bağlı değil
+    function sendContactEmail(formData) {
+      const serviceID = 'service_a58zpcm';
+      const templateID = 'template_gzzkr69';
+      const publicKey = '0EIfzAKsRnhxxWaw8';
+
+      fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          service_id: serviceID,
+          template_id: templateID,
+          user_id: publicKey,
+          template_params: {
+            user_name: formData.get('user_name'),
+            user_email: formData.get('user_email'),
+            organisation: formData.get('organisation') || 'N/A',
+            topic: formData.get('topic'),
+            message_text: formData.get('message_text')
+          }
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          document.getElementById('formSuccess').style.display = 'block';
+          document.getElementById('formError').style.display = 'none';
+          document.getElementById('contactForm').reset();
+          setTimeout(() => {
+            document.getElementById('formSuccess').style.display = 'none';
+          }, 5000);
+          console.log('✅ Email sent successfully');
+        } else {
+          throw new Error('Failed to send email');
+        }
+      })
+      .catch(error => {
+        document.getElementById('formError').style.display = 'block';
+        document.getElementById('formSuccess').style.display = 'none';
+        document.getElementById('errorText').textContent = 'Error: ' + error.message;
+        console.error('❌ Error:', error);
+      })
+      .finally(() => {
+        const submitBtn = document.getElementById('submit-btn');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+      });
+    }
 
     document.addEventListener('DOMContentLoaded', function() {
       const contactForm = document.getElementById('contactForm');
@@ -342,38 +388,11 @@
           e.preventDefault();
 
           const submitBtn = document.getElementById('submit-btn');
-          const formSuccess = document.getElementById('formSuccess');
-          const formError = document.getElementById('formError');
-
           submitBtn.disabled = true;
-          const originalText = submitBtn.innerHTML;
           submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-          
-          formError.style.display = 'none';
 
-          emailjs.sendForm('service_a58zpcm', 'template_gzzkr69', contactForm)
-            .then(function(response) {
-              formSuccess.style.display = 'block';
-              formError.style.display = 'none';
-              
-              contactForm.reset();
-              
-              setTimeout(function() {
-                formSuccess.style.display = 'none';
-              }, 5000);
-
-              console.log('✅ Email sent:', response.status);
-            })
-            .catch(function(error) {
-              formError.style.display = 'block';
-              formSuccess.style.display = 'none';
-              document.getElementById('errorText').textContent = 'Error: ' + (error.text || 'Unknown error');
-              console.error('❌ Error:', error);
-            })
-            .finally(function() {
-              submitBtn.disabled = false;
-              submitBtn.innerHTML = originalText;
-            });
+          const formData = new FormData(contactForm);
+          sendContactEmail(formData);
         });
       }
     });
