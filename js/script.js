@@ -55,20 +55,6 @@ if (animatedEls.length) {
   animatedEls.forEach(el => observer.observe(el));
 }
 
-/* -------- CONTACT FORM (demo) -------- */
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const successMsg = document.getElementById('formSuccess');
-    if (successMsg) {
-      successMsg.style.display = 'block';
-      contactForm.reset();
-      setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
-    }
-  });
-}
-
 /* -------- GALLERY LIGHTBOX -------- */
 (function initGalleryLightbox() {
   const items = document.querySelectorAll('.gallery-item');
