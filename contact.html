@@ -254,12 +254,12 @@
           <form id="contactForm">
             <div class="form-row">
               <div class="form-group">
-                <label for="user_name">Full Name *</label>
-                <input type="text" id="user_name" name="user_name" placeholder="Your full name" required>
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
               </div>
               <div class="form-group">
-                <label for="user_email">Email Address *</label>
-                <input type="email" id="user_email" name="user_email" placeholder="your@email.com" required>
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
               </div>
             </div>
 
@@ -269,8 +269,8 @@
             </div>
 
             <div class="form-group">
-              <label for="topic">Subject *</label>
-              <select id="topic" name="topic" required>
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
                 <option value="" disabled selected>Select a topic…</option>
                 <option>Partnership inquiry</option>
                 <option>Erasmus+ project</option>
@@ -282,8 +282,8 @@
             </div>
 
             <div class="form-group">
-              <label for="message_text">Message *</label>
-              <textarea id="message_text" name="message_text" placeholder="Tell us how we can help…" required></textarea>
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us how we can help…" required></textarea>
             </div>
 
             <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;">
@@ -346,12 +346,11 @@
           template_id: templateID,
           user_id: publicKey,
           template_params: {
-          to_email: formData.get('user_email'),
-            user_name: formData.get('user_name'),
-            user_email: formData.get('user_email'),
+            name: formData.get('name'),
+            email: formData.get('email'),
             organisation: formData.get('organisation') || 'N/A',
-            topic: formData.get('topic'),
-            message_text: formData.get('message_text')
+            subject: formData.get('subject'),
+            message: formData.get('message')
           }
         })
       })
