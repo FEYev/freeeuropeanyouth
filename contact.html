@@ -346,6 +346,7 @@
           template_id: templateID,
           user_id: publicKey,
           template_params: {
+          to_email: formData.get('user_email'),
             user_name: formData.get('user_name'),
             user_email: formData.get('user_email'),
             organisation: formData.get('organisation') || 'N/A',
