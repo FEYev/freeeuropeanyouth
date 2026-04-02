@@ -361,62 +361,69 @@
   <!-- Email.js Kütüphanesi -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 
-  <script src="js/script.js"></script>
+  <!-- Email.js Kütüphanesi -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 
   <script>
     // Email.js başlatma
     emailjs.init("0EIfzAKsRnhxxWaw8");
 
-    // Contact form işleme
-    const contactForm = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submit-btn');
-    const formSuccess = document.getElementById('formSuccess');
-    const formError = document.getElementById('formError');
+    // Contact form işleme - Email.js entegrasyonu
+    document.addEventListener('DOMContentLoaded', function() {
+      const contactForm = document.getElementById('contactForm');
+      
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
 
-    if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+          const submitBtn = document.getElementById('submit-btn');
+          const formSuccess = document.getElementById('formSuccess');
+          const formError = document.getElementById('formError');
 
-        // Butonu devre dışı bırak ve loading göster
-        submitBtn.disabled = true;
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-        
-        // Hata mesajını gizle
-        formError.style.display = 'none';
+          // Butonu devre dışı bırak ve loading göster
+          submitBtn.disabled = true;
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+          
+          // Hata mesajını gizle
+          formError.style.display = 'none';
 
-        // Email.js ile gönder
-        emailjs.sendForm('service_a58zpcm', 'template_gzzkr69', contactForm)
-          .then(function(response) {
-            // Başarı mesajını göster
-            formSuccess.style.display = 'block';
-            formError.style.display = 'none';
-            
-            // Formu sıfırla
-            contactForm.reset();
-            
-            // 5 saniye sonra başarı mesajını gizle
-            setTimeout(function() {
+          // Email.js ile gönder
+          emailjs.sendForm('service_a58zpcm', 'template_gzzkr69', contactForm)
+            .then(function(response) {
+              // Başarı mesajını göster
+              formSuccess.style.display = 'block';
+              formError.style.display = 'none';
+              
+              // Formu sıfırla
+              contactForm.reset();
+              
+              // 5 saniye sonra başarı mesajını gizle
+              setTimeout(function() {
+                formSuccess.style.display = 'none';
+              }, 5000);
+
+              console.log('✅ Email sent successfully:', response.status, response.text);
+            })
+            .catch(function(error) {
+              // Hata mesajını göster
+              formError.style.display = 'block';
               formSuccess.style.display = 'none';
-            }, 5000);
+              document.getElementById('errorText').textContent = 'Error: ' + (error.text || 'Unknown error occurred');
+              
+              console.error('❌ Email sending failed:', error);
+            })
+            .finally(function() {
+              // Butonu eski haline döndür
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalText;
+            });
+        });
+      }
+    });
+  </script>
 
-            console.log('Email sent successfully:', response.status, response.text);
-          })
-          .catch(function(error) {
-            // Hata mesajını göster
-            formError.style.display = 'block';
-            formSuccess.style.display = 'none';
-            document.getElementById('errorText').textContent = 'Error: ' + (error.text || 'Unknown error occurred');
-            
-            console.error('Email sending failed:', error);
-          })
-          .finally(function() {
-            // Butonu eski haline döndür
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
-          });
-      });
-    }
+  <script src="js/script.js"></script>
 
     /* ===== DİL DEĞİŞTİRİCİ ===== */
     var currentLang = 'en';
