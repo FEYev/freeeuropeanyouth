@@ -3,176 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free European Youth e.V. – Empowering Youth Across Europe</title>
-  <meta name="description" content="Free European Youth e.V. is a German NGO promoting youth empowerment, social inclusion, sustainability, and intercultural exchange through Erasmus+ projects." />
-  <meta name="keywords" content="Free European Youth, Erasmus+, NGO, youth empowerment, inclusion, Germany" />
-  <meta property="og:title" content="Free European Youth e.V." />
-  <meta property="og:description" content="Empowering youth across Europe through non-formal education and Erasmus+ projects." />
-  <meta property="og:type" content="website" />
+  <title>Gallery – Free European Youth e.V.</title>
+  <meta name="description" content="Photos from our events, activities, and community life across Europe." />
   <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
- 
+
   <style>
-    /* ── DİL SEÇİCİ ── */
+    /* Dil seçici */
     .lang-switcher { display:flex; align-items:center; gap:6px; }
-
     .lang-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 5px 10px;
-      border-radius: 8px;
-      font-family: var(--font-head);
-      font-size: 0.82rem;
-      font-weight: 700;
-      cursor: pointer;
-      border: 2px solid var(--gray-200);
-      background: var(--white);
-      color: var(--gray-800);
-      transition: all 0.25s;
-      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 5px 10px; border-radius: 8px;
+      font-family: var(--font-head); font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; border: 2px solid var(--gray-200);
+      background: var(--white); color: var(--gray-800);
+      transition: all 0.25s; text-decoration: none;
     }
-    .lang-btn:hover,
-    .lang-btn.active {
-      border-color: var(--blue);
-      color: var(--blue);
-      background: var(--gray-100);
+    .lang-btn:hover, .lang-btn.active {
+      border-color: var(--blue); color: var(--blue); background: var(--gray-100);
     }
-
-    /* CSS bayraklar — font bağımsız, her tarayıcıda çalışır */
     .flag-icon {
-      display: inline-block;
-      width: 18px;
-      height: 13px;
-      border-radius: 2px;
-      overflow: hidden;
-      flex-shrink: 0;
-      vertical-align: middle;
-      position: relative;
+      display: inline-block; width: 18px; height: 13px; border-radius: 2px;
+      overflow: hidden; flex-shrink: 0; vertical-align: middle; position: relative;
     }
-    .flag-gb {
-      background: #012169;
-    }
+    .flag-gb { background: #012169; }
     .flag-gb::before {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background:
         linear-gradient(to bottom right, transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px)),
         linear-gradient(to bottom left,  transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px));
     }
     .flag-gb::after {
-      content: '';
-      position: absolute; inset: 0;
+      content: ''; position: absolute; inset: 0;
       background:
         linear-gradient(to bottom right, transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
         linear-gradient(to bottom left,  transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
         linear-gradient(#fff 0 0) center / 4px 100% no-repeat,
         linear-gradient(#fff 0 0) center / 100% 4px no-repeat;
     }
-    .flag-de {
-      background: linear-gradient(to bottom, #000 33.3%, #D00 33.3% 66.6%, #FFCE00 66.6%);
-    }
-
-    /* Mobilde hamburger içi dil seçici */
-    .lang-switcher-mobile {
-      display: none;
-      margin-top: 8px;
-      padding-top: 12px;
-      border-top: 1px solid var(--gray-200);
-    }
+    .flag-de { background: linear-gradient(to bottom, #000 33.3%, #D00 33.3% 66.6%, #FFCE00 66.6%); }
+    .lang-switcher-mobile { display: none; margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
     @media (max-width: 768px) {
       .lang-switcher-desktop { display: none !important; }
       .lang-switcher-mobile  { display: flex !important; }
     }
-
-    /* Google Translate araç çubuğunu gizle */
     .goog-te-banner-frame, .skiptranslate { display: none !important; }
     body { top: 0 !important; }
-
-    /* ── HEADER'I KÖŞELERE YAY ── */
-    .header-inner {
-      max-width: 100% !important;
-      padding-left: 48px !important;
-      padding-right: 48px !important;
-    }
-    @media (max-width: 768px) {
-      .header-inner {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-      }
-    }
-
-    /* Logo "Youth" span rengi */
+    .header-inner { max-width: 100% !important; padding-left: 48px !important; padding-right: 48px !important; }
+    @media (max-width: 768px) { .header-inner { padding-left: 16px !important; padding-right: 16px !important; } }
     .logo .logo-text span { color: #d4a017 !important; }
-
-    /* Header sosyal ikonlar — renkli yuvarlak */
     .header-social .social-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      color: #fff !important;
-      text-decoration: none;
+      width: 32px; height: 32px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 13px; color: #fff !important; text-decoration: none;
       transition: transform 0.18s, opacity 0.18s;
     }
     .header-social .social-icon:hover { transform: scale(1.1); opacity: 0.88; }
     .header-social .social-icon.yt { background: #ff0000; }
     .header-social .social-icon.ig { background: linear-gradient(135deg,#f09433,#dc2743,#bc1888); }
     .header-social .social-icon.fb { background: #1877f2; }
+
+    /* Galeri bölüm başlığı */
+    .gallery-section-title {
+      font-family: var(--font-head);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--blue);
+      margin: 48px 0 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gray-200);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Google Translate container — gizli, zorunlu -->
   <div id="gt-container" style="display:none;"></div>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
-
-      <!-- LOGO -->
-      <a href="gallery.html" class="logo">
-  <img 
-    src="images/FEY.png" 
-    alt="Free European Youth e.V." 
-    style="height:44px; width:44px; border-radius:50%; object-fit:cover;">
-  <div class="logo-text">Free European <span>Youth e.V.</span></div>
-</a>
-
-      <!-- NAVIGATION -->
+      <a href="index.html" class="logo">
+        <img src="images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:44px;border-radius:50%;object-fit:cover;">
+        <div class="logo-text">Free European <span>Youth e.V.</span></div>
+      </a>
       <nav class="main-nav" role="navigation" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="events.html">Events</a>
         <a href="team.html">Team</a>
-        <a href="gallery.html">Gallery</a>
+        <a href="gallery.html" class="active">Gallery</a>
         <a href="contact.html">Contact</a>
-        <!-- Mobil hamburger içinde bayraklı dil seçici -->
         <div class="lang-switcher lang-switcher-mobile">
-          <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')">
-            <span class="flag-icon flag-gb"></span> EN
-          </button>
-          <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')">
-            <span class="flag-icon flag-de"></span> DE
-          </button>
+          <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')"><span class="flag-icon flag-gb"></span> EN</button>
+          <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')"><span class="flag-icon flag-de"></span> DE</button>
         </div>
       </nav>
-
-      <!-- SOSYAL + HAMBURGER + PC DİL SEÇİCİ -->
       <div class="header-social" style="display:flex;align-items:center;gap:10px;">
-        <!-- PC'de bayraklı dil seçici -->
         <div class="lang-switcher lang-switcher-desktop">
-          <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">
-            <span class="flag-icon flag-gb"></span> EN
-          </button>
-          <button class="lang-btn" id="btn-de" onclick="switchLang('de')">
-            <span class="flag-icon flag-de"></span> DE
-          </button>
+          <button class="lang-btn active" id="btn-en" onclick="switchLang('en')"><span class="flag-icon flag-gb"></span> EN</button>
+          <button class="lang-btn" id="btn-de" onclick="switchLang('de')"><span class="flag-icon flag-de"></span> DE</button>
         </div>
         <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
         <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
@@ -181,10 +115,8 @@
           <span></span><span></span><span></span>
         </button>
       </div>
-
     </div>
   </header>
-  
 
   <!-- PAGE HEADER -->
   <section class="page-header">
@@ -201,166 +133,266 @@
     </div>
   </section>
 
-
-  <!-- ============================================================
-       GALLERY
-       HOW TO ADD NEW PHOTOS:
-         1. Upload your photo to the /images/gallery/ folder
-         2. Copy one .gallery-item div below
-         3. Replace the placeholder div with:
-            <img src="../images/gallery/your-photo.jpg" alt="Describe the photo">
-         4. Delete the .gallery-img-placeholder div
-         5. Save the file
-
-       TIP: Every 4th image (1st, 5th, 9th...) is displayed taller.
-            Place your best/most interesting photos in those spots.
-       ============================================================ -->
+  <!-- GALLERY -->
   <section class="section">
     <div class="container">
 
-      <!-- GALLERY FILTER BUTTONS (optional — just for visual) -->
+      <!-- FİLTRE BUTONLARI -->
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;" class="animate-on-scroll">
         <button onclick="filterGallery('all')" id="filter-all" class="btn btn-primary" style="font-size:.85rem;padding:8px 18px;">All Photos</button>
-        <button onclick="filterGallery('events')" id="filter-events" class="btn btn-outline" style="font-size:.85rem;padding:8px 18px;">Events</button>
-        <button onclick="filterGallery('activities')" id="filter-activities" class="btn btn-outline" style="font-size:.85rem;padding:8px 18px;">Activities</button>
-        <button onclick="filterGallery('team')" id="filter-team" class="btn btn-outline" style="font-size:.85rem;padding:8px 18px;">Team</button>
+        <button onclick="filterGallery('egv')" id="filter-egv" class="btn btn-outline" style="font-size:.85rem;padding:8px 18px;">Erasmus+ Going Virtual</button>
+        <!-- YENİ ETKİNLİK EKLEYİNCE BURAYA YENİ BUTON EKLE:
+        <button onclick="filterGallery('xxx')" id="filter-xxx" class="btn btn-outline" style="font-size:.85rem;padding:8px 18px;">Etkinlik Adı</button>
+        -->
       </div>
+
+      <!-- ============================================================
+           ERASMUS+ GOING VIRTUAL — 27 FOTOĞRAF
+           YENİ FOTOĞRAF EKLEMEK İÇİN:
+           Aşağıdaki gallery-item div'lerinden birini kopyalayın
+           ve src içindeki dosya adını değiştirin.
+           data-category="egv" olarak bırakın.
+           ============================================================ -->
+      <h2 class="gallery-section-title">
+        <i class="fas fa-star" style="color:var(--blue);font-size:1rem;"></i>
+        Erasmus+ Going Virtual – Online Methods for Youth Workers
+      </h2>
 
       <div class="gallery-grid" id="galleryGrid">
 
+        <!-- FOTOĞRAF 1 -->
+        <div class="gallery-item animate-on-scroll" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/1.jpeg" alt="Erasmus+ Going Virtual - Photo 1">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 2 -->
+        <div class="gallery-item animate-on-scroll delay-1" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/2.jpeg" alt="Erasmus+ Going Virtual - Photo 2">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 3 -->
+        <div class="gallery-item animate-on-scroll delay-2" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/3.jpeg" alt="Erasmus+ Going Virtual - Photo 3">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 4 -->
+        <div class="gallery-item animate-on-scroll delay-3" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/4.jpeg" alt="Erasmus+ Going Virtual - Photo 4">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 5 -->
+        <div class="gallery-item animate-on-scroll" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/5.jpeg" alt="Erasmus+ Going Virtual - Photo 5">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 6 -->
+        <div class="gallery-item animate-on-scroll delay-1" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/6.jpeg" alt="Erasmus+ Going Virtual - Photo 6">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 7 -->
+        <div class="gallery-item animate-on-scroll delay-2" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/7.jpeg" alt="Erasmus+ Going Virtual - Photo 7">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 8 -->
+        <div class="gallery-item animate-on-scroll delay-3" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/8.jpeg" alt="Erasmus+ Going Virtual - Photo 8">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 9 -->
+        <div class="gallery-item animate-on-scroll" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/9.jpeg" alt="Erasmus+ Going Virtual - Photo 9">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 10 -->
+        <div class="gallery-item animate-on-scroll delay-1" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/10.jpeg" alt="Erasmus+ Going Virtual - Photo 10">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 11 -->
+        <div class="gallery-item animate-on-scroll delay-2" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/11.jpeg" alt="Erasmus+ Going Virtual - Photo 11">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 12 -->
+        <div class="gallery-item animate-on-scroll delay-3" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/12.jpeg" alt="Erasmus+ Going Virtual - Photo 12">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 13 -->
+        <div class="gallery-item animate-on-scroll" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/13.jpeg" alt="Erasmus+ Going Virtual - Photo 13">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 14 -->
+        <div class="gallery-item animate-on-scroll delay-1" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/14.jpeg" alt="Erasmus+ Going Virtual - Photo 14">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 15 -->
+        <div class="gallery-item animate-on-scroll delay-2" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/15.jpeg" alt="Erasmus+ Going Virtual - Photo 15">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 16 -->
+        <div class="gallery-item animate-on-scroll delay-3" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/16.jpeg" alt="Erasmus+ Going Virtual - Photo 16">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 17 -->
+        <div class="gallery-item animate-on-scroll" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/17.jpeg" alt="Erasmus+ Going Virtual - Photo 17">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 18 -->
+        <div class="gallery-item animate-on-scroll delay-1" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/18.jpeg" alt="Erasmus+ Going Virtual - Photo 18">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 19 -->
+        <div class="gallery-item animate-on-scroll delay-2" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/19.jpeg" alt="Erasmus+ Going Virtual - Photo 19">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 20 -->
+        <div class="gallery-item animate-on-scroll delay-3" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/20.jpeg" alt="Erasmus+ Going Virtual - Photo 20">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 21 -->
+        <div class="gallery-item animate-on-scroll" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/21.jpeg" alt="Erasmus+ Going Virtual - Photo 21">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 22 -->
+        <div class="gallery-item animate-on-scroll delay-1" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/22.jpeg" alt="Erasmus+ Going Virtual - Photo 22">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 23 -->
+        <div class="gallery-item animate-on-scroll delay-2" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/23.jpeg" alt="Erasmus+ Going Virtual - Photo 23">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 24 -->
+        <div class="gallery-item animate-on-scroll delay-3" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/24.jpeg" alt="Erasmus+ Going Virtual - Photo 24">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 25 -->
+        <div class="gallery-item animate-on-scroll" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/25.jpeg" alt="Erasmus+ Going Virtual - Photo 25">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 26 -->
+        <div class="gallery-item animate-on-scroll delay-1" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/26.jpeg" alt="Erasmus+ Going Virtual - Photo 26">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
+        <!-- FOTOĞRAF 27 -->
+        <div class="gallery-item animate-on-scroll delay-2" data-category="egv">
+          <div class="gallery-img-wrap">
+            <img src="images/gallery/EGV/27.jpeg" alt="Erasmus+ Going Virtual - Photo 27">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+
         <!-- ============================================================
-             ADD NEW GALLERY IMAGES HERE
-             To add a real photo, replace the .gallery-img-placeholder div
-             with: <img src="../images/gallery/filename.jpg" alt="Description">
-             ============================================================ -->
+             YENİ ETKİNLİK FOTOĞRAFLARI EKLEMEK İÇİN:
+             Aşağıdaki bloğu kopyalayıp düzenleyin.
+             data-category="yeni-etkinlik-adi" yapın
+             ve filtre butonuna da aynı category'yi ekleyin.
 
-        <!-- GALLERY IMAGE 1 (tall slot — use a great photo here) -->
-        <div class="gallery-item animate-on-scroll" data-category="events">
+        <div class="gallery-item animate-on-scroll" data-category="cc">
           <div class="gallery-img-wrap">
-            <!-- EDIT: <img src="images/gallery/event-exchange-2024.jpg" alt="Youth Exchange 2024"> -->
-            <img src="images/events/EGGKapak.png" alt="Youth Exchange 2024">
-        
-              <span>Youth Exchange 2024</span>
-            </div>
+            <img src="images/gallery/CC/1.jpeg" alt="Climate Crisis - Photo 1">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
         </div>
+        ============================================================ -->
 
-        <!-- GALLERY IMAGE 2 -->
-        <div class="gallery-item animate-on-scroll delay-1" data-category="activities">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🌿<span>Green Workshop</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 3 -->
-        <div class="gallery-item animate-on-scroll delay-2" data-category="team">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">👥<span>Team Meeting</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 4 -->
-        <div class="gallery-item animate-on-scroll delay-3" data-category="activities">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🎨<span>Workshop Activity</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 5 (tall slot) -->
-        <div class="gallery-item animate-on-scroll" data-category="events">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🤝<span>Partnership Event</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 6 -->
-        <div class="gallery-item animate-on-scroll delay-1" data-category="activities">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">💻<span>Digital Skills Session</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 7 -->
-        <div class="gallery-item animate-on-scroll delay-2" data-category="events">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🌅<span>Opening Ceremony</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 8 -->
-        <div class="gallery-item animate-on-scroll delay-3" data-category="team">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🎤<span>Presentation</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 9 (tall slot) -->
-        <div class="gallery-item animate-on-scroll" data-category="activities">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🎭<span>Cultural Exchange</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 10 -->
-        <div class="gallery-item animate-on-scroll delay-1" data-category="events">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🎉<span>Closing Night</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 11 -->
-        <div class="gallery-item animate-on-scroll delay-2" data-category="activities">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🏕️<span>Outdoor Activity</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 12 -->
-        <div class="gallery-item animate-on-scroll delay-3" data-category="team">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🌟<span>Award Ceremony</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- ADD NEW GALLERY IMAGE HERE — copy a .gallery-item above -->
-
-      </div>
-
-      <!-- How to add photos tip -->
-      <div style="margin-top:48px;padding:24px;background:var(--off-white);border-radius:var(--radius);border:1px dashed var(--gray-200);" class="animate-on-scroll">
-        <p style="font-size:0.9rem;color:var(--gray-500);text-align:center;">
-          <i class="fas fa-info-circle" style="color:var(--blue);"></i>
-          &nbsp;To add real photos: upload images to the <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;">images/gallery/</code> folder,
-          then replace the placeholder divs in this file with
-          <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;">&lt;img src="images/gallery/filename.jpg" alt="Description"&gt;</code>
-        </p>
       </div>
     </div>
   </section>
-
 
   <!-- CTA -->
   <section class="cta-section">
@@ -374,13 +406,15 @@
     </div>
   </section>
 
-
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="logo" style="margin-bottom:18px;display:inline-flex;"><img src="images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:auto;"><div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div></a>
+          <a href="index.html" class="logo" style="margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;">
+            <img src="images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:auto;">
+            <div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div>
+          </a>
           <p>A German-registered NGO connecting migrant and local youth across Europe through Erasmus+ projects since 2020.</p>
           <div class="footer-social">
             <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
@@ -392,33 +426,60 @@
         <div class="footer-col"><h4>Focus Areas</h4><div class="footer-links"><a href="about.html">Social Inclusion</a><a href="about.html">Sustainability</a><a href="about.html">Digital Skills</a><a href="about.html">Youth Employability</a></div></div>
         <div class="footer-col"><h4>Contact</h4><div class="footer-links"><a href="mailto:info@freeeuropeanyouth.eu">info@freeeuropeanyouth.eu</a><a href="contact.html">Send a message</a></div><div style="margin-top:20px;"><span class="footer-oid">OID: E10307717</span></div></div>
       </div>
-      <div class="footer-bottom"><span>© 2025 Free European Youth e.V. All rights reserved.</span><span>Registered NGO in Germany · Erasmus+ Accredited</span></div>
+      <div class="footer-bottom">
+        <span>© 2025 Free European Youth e.V. All rights reserved.</span>
+        <span>Registered NGO in Germany · Erasmus+ Accredited</span>
+      </div>
     </div>
   </footer>
 
   <script src="js/script.js"></script>
   <script>
-    // Simple gallery filter
+    // Galeri filtre
     function filterGallery(category) {
-      const items = document.querySelectorAll('.gallery-item');
-      items.forEach(item => {
-        if (category === 'all' || item.dataset.category === category) {
-          item.style.display = '';
-        } else {
-          item.style.display = 'none';
-        }
+      var items = document.querySelectorAll('.gallery-item');
+      items.forEach(function(item) {
+        item.style.display = (category === 'all' || item.dataset.category === category) ? '' : 'none';
       });
-      // Update button states
-      document.querySelectorAll('[id^="filter-"]').forEach(btn => {
+      document.querySelectorAll('[id^="filter-"]').forEach(function(btn) {
         btn.className = 'btn btn-outline';
         btn.style.fontSize = '.85rem';
         btn.style.padding = '8px 18px';
       });
-      const activeBtn = document.getElementById('filter-' + category);
-      if (activeBtn) {
-        activeBtn.className = 'btn btn-primary';
-        activeBtn.style.fontSize = '.85rem';
-        activeBtn.style.padding = '8px 18px';
+      var active = document.getElementById('filter-' + category);
+      if (active) { active.className = 'btn btn-primary'; active.style.fontSize = '.85rem'; active.style.padding = '8px 18px'; }
+    }
+
+    // Dil değiştirici
+    var currentLang = 'en';
+    function setActiveButtons(lang) {
+      ['btn-en','btn-de','btn-en-m','btn-de-m'].forEach(function(id) {
+        var el = document.getElementById(id); if (el) el.classList.remove('active');
+      });
+      var ids = lang === 'en' ? ['btn-en','btn-en-m'] : ['btn-de','btn-de-m'];
+      ids.forEach(function(id) { var el = document.getElementById(id); if (el) el.classList.add('active'); });
+    }
+    function switchLang(lang) {
+      if (lang === currentLang) return;
+      currentLang = lang;
+      setActiveButtons(lang);
+      if (lang === 'de') {
+        if (!document.getElementById('gt-script')) {
+          window.googleTranslateInit = function() {
+            new google.translate.TranslateElement({ pageLanguage:'en', includedLanguages:'de', autoDisplay:false }, 'gt-container');
+            setTimeout(function() { var s = document.querySelector('.goog-te-combo'); if(s){s.value='de';s.dispatchEvent(new Event('change'));} }, 900);
+          };
+          var s = document.createElement('script');
+          s.id = 'gt-script';
+          s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit';
+          document.body.appendChild(s);
+        } else {
+          var s = document.querySelector('.goog-te-combo'); if(s){s.value='de';s.dispatchEvent(new Event('change'));}
+        }
+      } else {
+        var s = document.querySelector('.goog-te-combo');
+        if (s) { s.value='en'; s.dispatchEvent(new Event('change')); }
+        else { document.cookie='googtrans=/en/en;path=/'; location.reload(); }
       }
     }
   </script>
