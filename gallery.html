@@ -202,23 +202,11 @@
   </section>
 
 
-  <!-- ============================================================
-       GALLERY
-       HOW TO ADD NEW PHOTOS:
-         1. Upload your photo to the /images/gallery/ folder
-         2. Copy one .gallery-item div below
-         3. Replace the placeholder div with:
-            <img src="../images/gallery/your-photo.jpg" alt="Describe the photo">
-         4. Delete the .gallery-img-placeholder div
-         5. Save the file
-
-       TIP: Every 4th image (1st, 5th, 9th...) is displayed taller.
-            Place your best/most interesting photos in those spots.
-       ============================================================ -->
+  <!-- GALLERY -->
   <section class="section">
     <div class="container">
 
-      <!-- GALLERY FILTER BUTTONS (optional — just for visual) -->
+      <!-- GALLERY FILTER BUTTONS -->
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px;" class="animate-on-scroll">
         <button onclick="filterGallery('all')" id="filter-all" class="btn btn-primary" style="font-size:.85rem;padding:8px 18px;">All Photos</button>
         <button onclick="filterGallery('events')" id="filter-events" class="btn btn-outline" style="font-size:.85rem;padding:8px 18px;">Events</button>
@@ -228,134 +216,131 @@
 
       <div class="gallery-grid" id="galleryGrid">
 
-        <!-- ============================================================
-             ADD NEW GALLERY IMAGES HERE
-             To add a real photo, replace the .gallery-img-placeholder div
-             with: <img src="../images/gallery/filename.jpg" alt="Description">
-             ============================================================ -->
-
-        <!-- GALLERY IMAGE 1 (tall slot — use a great photo here) -->
-        <div class="gallery-item animate-on-scroll" data-category="events">
+        <!-- ====== YOUTH EXCHANGE 2024 (27 PHOTOS FROM EGV FOLDER) ====== -->
+        <!-- Thumbnail (visible) -->
+        <div class="gallery-item animate-on-scroll" data-category="events" data-group="egv">
           <div class="gallery-img-wrap">
-            <!-- EDIT: <img src="images/gallery/event-exchange-2024.jpg" alt="Youth Exchange 2024"> -->
-            <div class="gallery-img-placeholder">
-              🌍
-              <span>Youth Exchange 2024</span>
-            </div>
+            <img src="images/gallery/EGV/1.jpeg" alt="Youth Exchange 2024">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
         </div>
 
-        <!-- GALLERY IMAGE 2 -->
-        <div class="gallery-item animate-on-scroll delay-1" data-category="activities">
+        <!-- Hidden photos 2-27 (will show in lightbox) -->
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/2.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/3.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/4.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/5.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/6.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/7.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/8.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/9.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/10.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/11.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/12.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/13.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/14.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/15.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/16.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/17.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/18.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/19.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/20.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/21.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/22.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/23.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/24.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/25.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/26.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+        <div class="gallery-item" data-category="events" data-group="egv" style="display:none;">
+          <div class="gallery-img-wrap"><img src="images/gallery/EGV/27.jpeg" alt="Youth Exchange 2024"></div>
+        </div>
+
+        <!-- ====== DIĞER KUTUÇUKLARl İÇİN HAZIR ALAN (27+ FOTOĞRAF EKLEYIN) ====== -->
+
+        <!-- GALLERY IMAGE 2 (Green Workshop) -->
+        <div class="gallery-item animate-on-scroll delay-1" data-category="activities" data-group="green-workshop">
           <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
             <div class="gallery-img-placeholder">🌿<span>Green Workshop</span></div>
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
         </div>
+        <!-- Hidden photos for Green Workshop (add here) -->
 
-        <!-- GALLERY IMAGE 3 -->
-        <div class="gallery-item animate-on-scroll delay-2" data-category="team">
+        <!-- GALLERY IMAGE 3 (Team Meeting) -->
+        <div class="gallery-item animate-on-scroll delay-2" data-category="team" data-group="team-meeting">
           <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
             <div class="gallery-img-placeholder">👥<span>Team Meeting</span></div>
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
         </div>
+        <!-- Hidden photos for Team Meeting (add here) -->
 
-        <!-- GALLERY IMAGE 4 -->
-        <div class="gallery-item animate-on-scroll delay-3" data-category="activities">
+        <!-- GALLERY IMAGE 4 (Workshop Activity) -->
+        <div class="gallery-item animate-on-scroll delay-3" data-category="activities" data-group="workshop-activity">
           <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
             <div class="gallery-img-placeholder">🎨<span>Workshop Activity</span></div>
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
         </div>
-
-        <!-- GALLERY IMAGE 5 (tall slot) -->
-        <div class="gallery-item animate-on-scroll" data-category="events">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🤝<span>Partnership Event</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 6 -->
-        <div class="gallery-item animate-on-scroll delay-1" data-category="activities">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">💻<span>Digital Skills Session</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 7 -->
-        <div class="gallery-item animate-on-scroll delay-2" data-category="events">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🌅<span>Opening Ceremony</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 8 -->
-        <div class="gallery-item animate-on-scroll delay-3" data-category="team">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🎤<span>Presentation</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 9 (tall slot) -->
-        <div class="gallery-item animate-on-scroll" data-category="activities">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🎭<span>Cultural Exchange</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 10 -->
-        <div class="gallery-item animate-on-scroll delay-1" data-category="events">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🎉<span>Closing Night</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 11 -->
-        <div class="gallery-item animate-on-scroll delay-2" data-category="activities">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🏕️<span>Outdoor Activity</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- GALLERY IMAGE 12 -->
-        <div class="gallery-item animate-on-scroll delay-3" data-category="team">
-          <div class="gallery-img-wrap">
-            <!-- ADD NEW GALLERY IMAGE HERE -->
-            <div class="gallery-img-placeholder">🌟<span>Award Ceremony</span></div>
-            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
-          </div>
-        </div>
-
-        <!-- ADD NEW GALLERY IMAGE HERE — copy a .gallery-item above -->
+        <!-- Hidden photos for Workshop Activity (add here) -->
 
       </div>
 
-      <!-- How to add photos tip -->
+      <!-- Info -->
       <div style="margin-top:48px;padding:24px;background:var(--off-white);border-radius:var(--radius);border:1px dashed var(--gray-200);" class="animate-on-scroll">
         <p style="font-size:0.9rem;color:var(--gray-500);text-align:center;">
           <i class="fas fa-info-circle" style="color:var(--blue);"></i>
-          &nbsp;To add real photos: upload images to the <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;">images/gallery/</code> folder,
-          then replace the placeholder divs in this file with
-          <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;">&lt;img src="images/gallery/filename.jpg" alt="Description"&gt;</code>
+          &nbsp;Youth Exchange 2024 - 27 photos loaded from <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;">images/gallery/EGV/</code>
         </p>
       </div>
     </div>
@@ -400,7 +385,7 @@
   <script>
     // Simple gallery filter
     function filterGallery(category) {
-      const items = document.querySelectorAll('.gallery-item');
+      const items = document.querySelectorAll('.gallery-item[data-category]');
       items.forEach(item => {
         if (category === 'all' || item.dataset.category === category) {
           item.style.display = '';
