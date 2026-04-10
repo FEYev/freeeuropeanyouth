@@ -3,79 +3,100 @@
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/about.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/projects.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/events.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/team.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/gallery.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/contact.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/events/event1.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/events/event2.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/events/event3.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://www.freeeuropeanyouth.eu/events/event4.html</loc>
-    <lastmod>2025-04-08</lastmod>
+    <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
+  <url>
+    <loc>https://www.freeeuropeanyouth.eu/events/event5.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.freeeuropeanyouth.eu/events/event6.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.freeeuropeanyouth.eu/events/event7.html</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 </urlset>
