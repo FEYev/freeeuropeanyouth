@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources – Free European Youth e.V.</title>
+  <meta name="description" content="Official documents, policies, reports and resources from Free European Youth e.V. — including our statute, gender equity commitment, annual reports and more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    /* ── DİL SEÇİCİ ── */
+    .lang-switcher { display:flex; align-items:center; gap:6px; }
+    .lang-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 5px 10px; border-radius: 8px;
+      font-family: var(--font-head); font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; border: 2px solid var(--gray-200);
+      background: var(--white); color: var(--gray-800);
+      transition: all 0.25s; text-decoration: none;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      border-color: var(--blue); color: var(--blue); background: var(--gray-100);
+    }
+    .flag-icon {
+      display: inline-block; width: 18px; height: 13px; border-radius: 2px;
+      overflow: hidden; flex-shrink: 0; vertical-align: middle; position: relative;
+    }
+    .flag-gb { background: #012169; }
+    .flag-gb::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom right, transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px)),
+        linear-gradient(to bottom left,  transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px));
+    }
+    .flag-gb::after {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(to bottom left,  transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(#fff 0 0) center / 4px 100% no-repeat,
+        linear-gradient(#fff 0 0) center / 100% 4px no-repeat;
+    }
+    .flag-de { background: linear-gradient(to bottom, #000 33.3%, #D00 33.3% 66.6%, #FFCE00 66.6%); }
+
+    .lang-switcher-mobile { display: none; margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
+    @media (max-width: 768px) {
+      .lang-switcher-desktop { display: none !important; }
+      .lang-switcher-mobile  { display: flex !important; }
+    }
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+
+    .header-inner {
+      max-width: 100% !important;
+      padding-left: 48px !important;
+      padding-right: 48px !important;
+    }
+    @media (max-width: 768px) {
+      .header-inner { padding-left: 16px !important; padding-right: 16px !important; }
+    }
+    .logo .logo-text span { color: #d4a017 !important; }
+    .header-social .social-icon {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 13px; color: #fff !important; text-decoration: none;
+      transition: transform 0.18s, opacity 0.18s;
+    }
+    .header-social .social-icon:hover { transform: scale(1.1); opacity: 0.88; }
+    .header-social .social-icon.yt { background: #ff0000; }
+    .header-social .social-icon.ig { background: linear-gradient(135deg,#f09433,#dc2743,#bc1888); }
+    .header-social .social-icon.fb { background: #1877f2; }
+
+    /* ── RESOURCES PAGE SPECIFIC ── */
+
+    /* Category section heading */
+    .res-category {
+      margin-bottom: 48px;
+    }
+    .res-category-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--gray-100);
+    }
+    .res-category-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(0,51,153,0.09);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .res-category-icon.gold  { background: rgba(245,197,24,0.15); color: #a07a00; }
+    .res-category-icon.green { background: rgba(46,139,87,0.12);  color: var(--green); }
+    .res-category-icon.red   { background: rgba(220,38,38,0.10);  color: #dc2626; }
+
+    .res-category-header h3 {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+    .res-category-header p {
+      font-size: 0.88rem;
+      color: var(--gray-500);
+      margin: 2px 0 0;
+    }
+
+    /* Document list */
+    .doc-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .doc-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      transition: all var(--transition);
+      text-decoration: none;
+      color: inherit;
+    }
+    .doc-item:hover {
+      border-color: var(--blue);
+      box-shadow: 0 4px 20px rgba(0,51,153,0.1);
+      transform: translateX(4px);
+    }
+
+    .doc-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .doc-icon.pdf   { background: rgba(220,38,38,0.1);  color: #dc2626; }
+    .doc-icon.word  { background: rgba(37,99,235,0.1);  color: #2563eb; }
+    .doc-icon.ext   { background: rgba(0,51,153,0.09);  color: var(--blue); }
+    .doc-icon.lock  { background: rgba(107,114,128,0.1); color: #6b7280; }
+
+    .doc-info { flex: 1; min-width: 0; }
+    .doc-info h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: var(--font-head);
+      margin-bottom: 3px;
+      color: var(--gray-800);
+    }
+    .doc-info p {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .doc-action {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--blue);
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .doc-action.coming-soon {
+      color: var(--gray-500);
+    }
+
+    /* Info box — transparency note */
+    .info-box {
+      background: rgba(0,51,153,0.05);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin-bottom: 56px;
+    }
+    .info-box p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--gray-800);
+    }
+    .info-box p + p { margin-top: 6px; }
+
+    /* Partner / external links grid */
+    .ext-links-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .ext-link-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      background: var(--white);
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-decoration: none;
+      color: inherit;
+      transition: all var(--transition);
+    }
+    .ext-link-card:hover {
+      border-color: var(--blue);
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+    .ext-link-card .ext-icon {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(0,51,153,0.08); color: var(--blue);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .ext-link-card h4 { font-size: 0.95rem; margin: 0; }
+    .ext-link-card p  { font-size: 0.82rem; color: var(--gray-500); margin: 0; }
+    .ext-link-card .ext-arrow {
+      margin-top: auto;
+      font-size: 0.8rem;
+      color: var(--blue);
+      font-family: var(--font-head);
+      font-weight: 700;
+    }
+
+    /* Two-column layout for resource sections */
+    .res-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .res-layout { grid-template-columns: 1fr; }
+      .ext-links-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .ext-links-grid { grid-template-columns: 1fr; }
+      .doc-item { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="gt-container" style="display:none;"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img src="images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:44px;border-radius:50%;object-fit:cover;">
+        <div class="logo-text">Free European <span>Youth e.V</span></div>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="events.html">Events</a>
+        <a href="news.html">News</a>
+        <a href="resources.html" class="active">Resources</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-social">
+        <div class="lang-switcher lang-switcher-desktop">
+          <button id="btn-en" class="lang-btn active" onclick="switchLang('en')">
+            <span class="flag-icon flag-gb"></span> EN
+          </button>
+          <button id="btn-de" class="lang-btn" onclick="switchLang('de')">
+            <span class="flag-icon flag-de"></span> DE
+          </button>
+        </div>
+        <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="lang-switcher-mobile" id="lang-switcher-mobile" style="display:none;padding:0 24px 16px;">
+      <button id="btn-en-m" class="lang-btn active" onclick="switchLang('en')"><span class="flag-icon flag-gb"></span> EN</button>
+      <button id="btn-de-m" class="lang-btn" onclick="switchLang('de')"><span class="flag-icon flag-de"></span> DE</button>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section style="background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 60%,var(--blue-light) 100%);padding:80px 0 60px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;pointer-events:none;">
+      <div style="position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.05);top:-150px;right:-100px;"></div>
+      <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.04);bottom:-80px;left:10%;"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:1;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;">
+        <a href="index.html" style="color:rgba(255,255,255,0.6);font-size:0.88rem;text-decoration:none;">Home</a>
+        <span style="color:rgba(255,255,255,0.4);">/</span>
+        <span style="color:rgba(255,255,255,0.9);font-size:0.88rem;">Resources</span>
+      </div>
+      <span class="section-label" style="background:rgba(255,255,255,0.15);color:#fff;">Documents &amp; Policies</span>
+      <h1 style="color:var(--white);margin-top:12px;margin-bottom:14px;">Resources</h1>
+      <p style="color:rgba(255,255,255,0.8);max-width:560px;font-size:1.1rem;">Our official documents, policies, and guidelines — available for members, partners, applicants, and the general public in the spirit of transparency and accountability.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Transparency note -->
+      <div class="info-box animate-on-scroll">
+        <p><strong><i class="fas fa-shield-alt" style="color:var(--blue);margin-right:6px;"></i>Commitment to Transparency</strong></p>
+        <p>Free European Youth e.V. is a registered non-profit NGO (VR 6280) and is committed to full transparency with its members, partners, and the public. All foundational documents are made available here. For questions regarding any document, please <a href="contact.html" style="color:var(--blue);font-weight:600;">contact us</a>.</p>
+      </div>
+
+      <!-- TWO COLUMN: Statute + Policies -->
+      <div class="res-layout" style="margin-bottom:64px;">
+
+        <!-- Founding & Legal Documents -->
+        <div class="res-category animate-on-scroll delay-1">
+          <div class="res-category-header">
+            <div class="res-category-icon"><i class="fas fa-landmark"></i></div>
+            <div>
+              <h3>Founding &amp; Legal Documents</h3>
+              <p>Official registration and governing documents</p>
+            </div>
+          </div>
+          <div class="doc-list">
+            <a href="documents/statute-fey.pdf" target="_blank" class="doc-item">
+              <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+              <div class="doc-info">
+                <h4>Statute (Satzung)</h4>
+                <p>Official founding statute · Last updated 2024</p>
+              </div>
+              <span class="doc-action"><i class="fas fa-download"></i> Download</span>
+            </a>
+            <a href="#" class="doc-item">
+              <div class="doc-icon lock"><i class="fas fa-file-alt"></i></div>
+              <div class="doc-info">
+                <h4>Certificate of Registration</h4>
+                <p>Amtsgericht Köln · VR 6280</p>
+              </div>
+              <span class="doc-action coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+            </a>
+            <a href="#" class="doc-item">
+              <div class="doc-icon lock"><i class="fas fa-file-alt"></i></div>
+              <div class="doc-info">
+                <h4>Non-Profit Status Confirmation</h4>
+                <p>Gemeinnützigkeitsbescheid · Finanzamt</p>
+              </div>
+              <span class="doc-action coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Policies & Commitments -->
+        <div class="res-category animate-on-scroll delay-2">
+          <div class="res-category-header">
+            <div class="res-category-icon gold"><i class="fas fa-balance-scale"></i></div>
+            <div>
+              <h3>Policies &amp; Commitments</h3>
+              <p>Our values and organisational standards</p>
+            </div>
+          </div>
+          <div class="doc-list">
+            <a href="documents/gender-equity-policy.pdf" target="_blank" class="doc-item">
+              <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+              <div class="doc-info">
+                <h4>Gender Equity Policy</h4>
+                <p>Our commitment to gender balance and inclusion</p>
+              </div>
+              <span class="doc-action"><i class="fas fa-download"></i> Download</span>
+            </a>
+            <a href="documents/safeguarding-policy.pdf" target="_blank" class="doc-item">
+              <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+              <div class="doc-info">
+                <h4>Safeguarding &amp; Child Protection Policy</h4>
+                <p>Protecting the safety of all participants</p>
+              </div>
+              <span class="doc-action"><i class="fas fa-download"></i> Download</span>
+            </a>
+            <a href="#" class="doc-item">
+              <div class="doc-icon lock"><i class="fas fa-leaf"></i></div>
+              <div class="doc-info">
+                <h4>Environmental &amp; Green Erasmus Policy</h4>
+                <p>Our sustainability commitments</p>
+              </div>
+              <span class="doc-action coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+            </a>
+            <a href="#" class="doc-item">
+              <div class="doc-icon lock"><i class="fas fa-shield-alt"></i></div>
+              <div class="doc-info">
+                <h4>Privacy Policy (GDPR)</h4>
+                <p>How we handle personal data</p>
+              </div>
+              <span class="doc-action coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- /res-layout -->
+
+      <!-- Annual Reports — full width -->
+      <div class="res-category animate-on-scroll">
+        <div class="res-category-header">
+          <div class="res-category-icon green"><i class="fas fa-chart-bar"></i></div>
+          <div>
+            <h3>Annual Reports &amp; Financial Statements</h3>
+            <p>Yearly overviews of our activities, impact, and finances</p>
+          </div>
+        </div>
+        <div class="doc-list">
+          <a href="#" class="doc-item">
+            <div class="doc-icon lock"><i class="fas fa-file-alt"></i></div>
+            <div class="doc-info">
+              <h4>Annual Report 2024</h4>
+              <p>Activities, projects, impact data and financial overview · Publication: Q1 2025</p>
+            </div>
+            <span class="doc-action coming-soon"><i class="fas fa-clock"></i> Coming Soon</span>
+          </a>
+          <a href="documents/annual-report-2023.pdf" target="_blank" class="doc-item">
+            <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+            <div class="doc-info">
+              <h4>Annual Report 2023</h4>
+              <p>Activities, projects, impact data and financial overview</p>
+            </div>
+            <span class="doc-action"><i class="fas fa-download"></i> Download</span>
+          </a>
+          <a href="documents/annual-report-2022.pdf" target="_blank" class="doc-item">
+            <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+            <div class="doc-info">
+              <h4>Annual Report 2022</h4>
+              <p>Activities, projects, impact data and financial overview</p>
+            </div>
+            <span class="doc-action"><i class="fas fa-download"></i> Download</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Erasmus+ / Project Documents -->
+      <div class="res-category animate-on-scroll">
+        <div class="res-category-header">
+          <div class="res-category-icon"><i class="fas fa-star"></i></div>
+          <div>
+            <h3>Erasmus+ &amp; Project Documents</h3>
+            <p>Application materials, info packs and participant forms</p>
+          </div>
+        </div>
+        <div class="doc-list">
+          <a href="documents/info-pack-template.pdf" target="_blank" class="doc-item">
+            <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+            <div class="doc-info">
+              <h4>Participant Information Pack Template</h4>
+              <p>Standard participant info pack used in our projects</p>
+            </div>
+            <span class="doc-action"><i class="fas fa-download"></i> Download</span>
+          </a>
+          <a href="documents/application-form.pdf" target="_blank" class="doc-item">
+            <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+            <div class="doc-info">
+              <h4>Participant Application Form</h4>
+              <p>General application form for FEY activities</p>
+            </div>
+            <span class="doc-action"><i class="fas fa-download"></i> Download</span>
+          </a>
+          <a href="documents/partner-agreement.pdf" target="_blank" class="doc-item">
+            <div class="doc-icon pdf"><i class="fas fa-file-pdf"></i></div>
+            <div class="doc-info">
+              <h4>Partnership Agreement Template</h4>
+              <p>Standard agreement used with partner organisations</p>
+            </div>
+            <span class="doc-action"><i class="fas fa-download"></i> Download</span>
+          </a>
+          <a href="#" class="doc-item">
+            <div class="doc-icon lock"><i class="fas fa-file-alt"></i></div>
+            <div class="doc-info">
+              <h4>OID Profile: E10307717</h4>
+              <p>Our official Erasmus+ Organisation ID registration</p>
+            </div>
+            <span class="doc-action ext" style="color:var(--blue);">
+              <a href="https://www.erasmus-plus.de" target="_blank" rel="noopener" style="color:inherit;display:flex;align-items:center;gap:6px;text-decoration:none;font-family:var(--font-head);font-size:0.82rem;font-weight:700;"><i class="fas fa-external-link-alt"></i> Erasmus+ DB</a>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Useful External Links -->
+      <div class="res-category animate-on-scroll">
+        <div class="res-category-header">
+          <div class="res-category-icon gold"><i class="fas fa-link"></i></div>
+          <div>
+            <h3>Useful External Links</h3>
+            <p>Programmes and institutions relevant to our work</p>
+          </div>
+        </div>
+        <div class="ext-links-grid">
+          <a href="https://erasmus-plus.ec.europa.eu" target="_blank" rel="noopener" class="ext-link-card">
+            <div class="ext-icon"><i class="fas fa-star"></i></div>
+            <h4>Erasmus+ Programme</h4>
+            <p>EU youth mobility and education funding programme</p>
+            <span class="ext-arrow"><i class="fas fa-external-link-alt"></i> Visit</span>
+          </a>
+          <a href="https://europa.eu/youth" target="_blank" rel="noopener" class="ext-link-card">
+            <div class="ext-icon"><i class="fas fa-users"></i></div>
+            <h4>European Youth Portal</h4>
+            <p>Opportunities, jobs, volunteering across Europe</p>
+            <span class="ext-arrow"><i class="fas fa-external-link-alt"></i> Visit</span>
+          </a>
+          <a href="https://www.salto-youth.net" target="_blank" rel="noopener" class="ext-link-card">
+            <div class="ext-icon"><i class="fas fa-globe"></i></div>
+            <h4>SALTO-YOUTH</h4>
+            <p>Resources and tools for youth workers and trainers</p>
+            <span class="ext-arrow"><i class="fas fa-external-link-alt"></i> Visit</span>
+          </a>
+          <a href="https://www.ijab.de" target="_blank" rel="noopener" class="ext-link-card">
+            <div class="ext-icon"><i class="fas fa-flag"></i></div>
+            <h4>IJAB Germany</h4>
+            <p>German National Agency for international youth work</p>
+            <span class="ext-arrow"><i class="fas fa-external-link-alt"></i> Visit</span>
+          </a>
+          <a href="https://www.youthpass.eu" target="_blank" rel="noopener" class="ext-link-card">
+            <div class="ext-icon"><i class="fas fa-certificate"></i></div>
+            <h4>Youthpass</h4>
+            <p>Certificate of participation for Erasmus+ projects</p>
+            <span class="ext-arrow"><i class="fas fa-external-link-alt"></i> Visit</span>
+          </a>
+          <a href="https://www.bundesjugendkuratorium.de" target="_blank" rel="noopener" class="ext-link-card">
+            <div class="ext-icon"><i class="fas fa-university"></i></div>
+            <h4>Bundesjugendkuratorium</h4>
+            <p>Federal advisory board on youth policy in Germany</p>
+            <span class="ext-arrow"><i class="fas fa-external-link-alt"></i> Visit</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Request a document -->
+      <div style="background:var(--off-white);border-radius:var(--radius-lg);padding:40px 48px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;" class="animate-on-scroll">
+        <div>
+          <h3 style="margin-bottom:8px;">Can't find what you need?</h3>
+          <p style="margin:0;color:var(--gray-500);">Request a specific document or ask a question about our organisation.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Contact Us</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;">
+      <h2 class="animate-on-scroll">Want to Become a Partner?</h2>
+      <p class="animate-on-scroll delay-1">We are always open to new partnerships with organisations that share our values of inclusion, sustainability, and youth empowerment.</p>
+      <div class="cta-buttons animate-on-scroll delay-2">
+        <a href="contact.html" class="btn btn-white"><i class="fas fa-envelope"></i> Get in Touch</a>
+        <a href="projects.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff;"><i class="fas fa-rocket"></i> See Our Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;">
+            <img src="images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:auto;">
+            <div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div>
+          </a>
+          <p>A German-registered NGO connecting migrant and local youth across Europe through Erasmus+ projects and non-formal education since 2020.</p>
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="projects.html">Projects</a><a href="events.html">Events</a><a href="news.html">News</a><a href="resources.html">Resources</a><a href="team.html">Team</a><a href="contact.html">Contact</a></div></div>
+        <div class="footer-col"><h4>Focus Areas</h4><div class="footer-links"><a href="about.html">Social Inclusion</a><a href="about.html">Sustainability</a><a href="about.html">Digital Skills</a><a href="about.html">Youth Employability</a><a href="about.html">Well-being</a><a href="about.html">Intercultural Exchange</a></div></div>
+        <div class="footer-col"><h4>Contact</h4><div class="footer-links"><a href="mailto:info@freeeuropeanyouth.eu">info@freeeuropeanyouth.eu</a><a href="https://wa.me/492212919790">+49 221 29197905</a><a href="contact.html">Send a message</a><span class="footer-oid">OID: E10307717</span></div></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Free European Youth e.V. All rights reserved.</span>
+        <span>Registered Non-Profit NGO · VR 6280</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    var currentLang = 'en';
+    function setActiveButtons(lang) {
+      ['btn-en','btn-de','btn-en-m','btn-de-m'].forEach(function(id) {
+        var el = document.getElementById(id); if (el) el.classList.remove('active');
+      });
+      var ids = lang === 'en' ? ['btn-en','btn-en-m'] : ['btn-de','btn-de-m'];
+      ids.forEach(function(id) { var el = document.getElementById(id); if (el) el.classList.add('active'); });
+    }
+    function triggerDE() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) { sel.value = 'de'; sel.dispatchEvent(new Event('change')); }
+    }
+    function restoreEN() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) { sel.value = 'en'; sel.dispatchEvent(new Event('change')); }
+      setTimeout(function() {
+        try {
+          var iframes = document.querySelectorAll('iframe.goog-te-banner-frame, iframe[name="googleTranslateIframe"]');
+          iframes.forEach(function(f) {
+            try { var doc = f.contentDocument || (f.contentWindow && f.contentWindow.document); if (!doc) return; var restore = doc.querySelector('[id*="restore"]') || doc.querySelector('.goog-close-link'); if (restore) restore.click(); } catch(e) {}
+          });
+        } catch(e) {}
+        var combo = document.querySelector('.goog-te-combo');
+        if (combo && combo.value && combo.value !== 'en') { document.cookie = 'googtrans=/en/en; path=/'; document.cookie = 'googtrans=/en/en; path=/; domain=.' + location.hostname; location.reload(); }
+      }, 600);
+    }
+    function switchLang(lang) {
+      if (lang === currentLang) return;
+      currentLang = lang; setActiveButtons(lang);
+      if (lang === 'de') {
+        if (!document.getElementById('gt-script')) {
+          window.googleTranslateInit = function() { new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'de', autoDisplay: false }, 'gt-container'); setTimeout(triggerDE, 900); };
+          var s = document.createElement('script'); s.id = 'gt-script'; s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit'; document.body.appendChild(s);
+        } else { triggerDE(); }
+      } else { restoreEN(); }
+    }
+  </script>
+</body>
+</html>
