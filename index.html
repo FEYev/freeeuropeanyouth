@@ -152,60 +152,69 @@
   <div id="gt-container" style="display:none;"></div>
 
   <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
+<!-- UPDATED HEADER NAVIGATION -->
+<header class="site-header">
+  <div class="header-inner">
 
-      <!-- LOGO -->
-      <a href="index.html" class="logo">
-  <img 
-    src="images/FEY.png" 
-    alt="Free European Youth e.V." 
-    style="height:44px; width:44px; border-radius:50%; object-fit:cover;">
-  <div class="logo-text">Free European <span>Youth e.V.</span></div>
-</a>
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <img src="images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:44px;border-radius:50%;object-fit:cover;">
+      <div class="logo-text">Free European <span>Youth</span></div>
+    </a>
 
-      <!-- NAVIGATION -->
-      <nav class="main-nav" role="navigation" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="events.html">Events</a>
-        <a href="team.html">Team</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="contact.html">Contact</a>
-        <!-- Mobil hamburger içinde bayraklı dil seçici -->
-        <div class="lang-switcher lang-switcher-mobile">
-          <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')">
-            <span class="flag-icon flag-gb"></span> EN
-          </button>
-          <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')">
-            <span class="flag-icon flag-de"></span> DE
-          </button>
-        </div>
-      </nav>
+    <!-- NAVIGATION -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="events.html">Events</a>
+      <a href="news.html">News</a>
+      <a href="resources.html">Resources</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
 
-      <!-- SOSYAL + HAMBURGER + PC DİL SEÇİCİ -->
-      <div class="header-social" style="display:flex;align-items:center;gap:10px;">
-        <!-- PC'de bayraklı dil seçici -->
-        <div class="lang-switcher lang-switcher-desktop">
-          <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">
-            <span class="flag-icon flag-gb"></span> EN
-          </button>
-          <button class="lang-btn" id="btn-de" onclick="switchLang('de')">
-            <span class="flag-icon flag-de"></span> DE
-          </button>
-        </div>
-        <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-        <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
+      <!-- Mobile language switcher (in hamburger menu) -->
+      <div class="lang-switcher lang-switcher-mobile">
+        <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')">
+          <span class="flag-icon flag-gb"></span> EN
+        </button>
+        <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')">
+          <span class="flag-icon flag-de"></span> DE
+        </button>
+      </div>
+    </nav>
+
+    <!-- SOCIAL + LANGUAGE SWITCHER + HAMBURGER -->
+    <div class="header-social" style="display:flex;align-items:center;gap:10px;">
+      
+      <!-- Desktop language switcher -->
+      <div class="lang-switcher lang-switcher-desktop">
+        <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">
+          <span class="flag-icon flag-gb"></span> EN
+        </button>
+        <button class="lang-btn" id="btn-de" onclick="switchLang('de')">
+          <span class="flag-icon flag-de"></span> DE
         </button>
       </div>
 
-    </div>
-  </header>
+      <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb">
+        <i class="fab fa-facebook-f"></i>
+      </a>
 
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
 
   <!-- HERO -->
   <section class="hero">
