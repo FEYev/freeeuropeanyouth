@@ -213,26 +213,81 @@ p  { font-size: 1.05rem; color: var(--gray-800); }
   color: var(--green);
 }
 
+/* ============================================================
+   UPDATED NAVIGATION CSS FOR 8 TABS
+   Paste this into your existing style.css file, replacing
+   the .main-nav section (around line 150-180)
+   ============================================================ */
+
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px; /* Reduced from 4px to fit more tabs */
 }
 
 .main-nav a {
-  padding: 8px 14px;
+  padding: 8px 11px; /* Reduced from 8px 14px */
   border-radius: 8px;
   font-family: var(--font-head);
-  font-size: 0.9rem;
+  font-size: 0.88rem; /* Reduced from 0.9rem */
   font-weight: 600;
   color: var(--gray-800);
   transition: all var(--transition);
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .main-nav a:hover,
 .main-nav a.active {
   background: var(--gray-100);
   color: var(--blue);
+}
+
+/* ============================================================
+   MOBILE NAVIGATION (NO CHANGES NEEDED)
+   The hamburger menu already handles all tabs properly
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 16px 24px 24px;
+    border-bottom: 1px solid var(--gray-200);
+    box-shadow: var(--shadow);
+    gap: 4px;
+    z-index: 999;
+  }
+
+  .main-nav.open {
+    display: flex !important;
+  }
+
+  .main-nav a {
+    padding: 14px 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    width: 100%;
+  }
+}
+
+/* ============================================================
+   OPTIONAL: For very wide screens, restore original spacing
+   ============================================================ */
+
+@media (min-width: 1280px) {
+  .main-nav {
+    gap: 4px;
+  }
+  
+  .main-nav a {
+    padding: 8px 13px;
+    font-size: 0.9rem;
+  }
 }
 
 .header-social {
