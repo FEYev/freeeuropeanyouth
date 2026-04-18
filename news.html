@@ -47,10 +47,27 @@
     }
     .flag-de { background: linear-gradient(to bottom, #000 33.3%, #D00 33.3% 66.6%, #FFCE00 66.6%); }
 
-    .lang-switcher-mobile { display: none; margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--gray-200); }
+    /* Lang switcher mobile — nav içinde görünür */
+    .lang-switcher-mobile {
+      display: none;
+      padding: 12px 16px;
+      border-top: 1px solid var(--gray-200);
+      margin-top: 4px;
+    }
     @media (max-width: 768px) {
       .lang-switcher-desktop { display: none !important; }
-      .lang-switcher-mobile  { display: flex !important; }
+      /* main-nav.open olduğunda lang-switcher-mobile görünsün */
+      .main-nav.open .lang-switcher-mobile { display: flex !important; }
+    }
+
+    /* Logo mobil fix */
+    @media (max-width: 768px) {
+      .logo img { height: 36px !important; width: 36px !important; }
+      .logo-text { font-size: 0.88rem !important; line-height: 1.2 !important; }
+    }
+    @media (max-width: 400px) {
+      .logo-text { font-size: 0.78rem !important; }
+      .logo img  { height: 30px !important; width: 30px !important; }
     }
     .goog-te-banner-frame, .skiptranslate { display: none !important; }
     body { top: 0 !important; }
@@ -341,6 +358,15 @@
         <a href="resources.html">Resources</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
+        <!-- Dil seçici — sadece hamburger menüde görünür -->
+        <div class="lang-switcher lang-switcher-mobile">
+          <button id="btn-en-m" class="lang-btn active" onclick="switchLang('en')">
+            <span class="flag-icon flag-gb"></span> EN
+          </button>
+          <button id="btn-de-m" class="lang-btn" onclick="switchLang('de')">
+            <span class="flag-icon flag-de"></span> DE
+          </button>
+        </div>
       </nav>
 
       <div class="header-social">
@@ -360,16 +386,6 @@
           <span></span><span></span><span></span>
         </button>
       </div>
-    </div>
-
-    <!-- Mobil hamburger menü içinde dil seçici -->
-    <div class="lang-switcher-mobile" id="lang-switcher-mobile" style="display:none;padding:0 24px 16px;">
-      <button id="btn-en-m" class="lang-btn active" onclick="switchLang('en')">
-        <span class="flag-icon flag-gb"></span> EN
-      </button>
-      <button id="btn-de-m" class="lang-btn" onclick="switchLang('de')">
-        <span class="flag-icon flag-de"></span> DE
-      </button>
     </div>
   </header>
 
