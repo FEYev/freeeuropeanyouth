@@ -3,43 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FEY e.V. Nature Warriors – Free European Youth e.V.</title>
-  <meta name="description" content="A workshop aims to provide young environmental advocates with practical hands-on strategies for nature conservation"/>
-  <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+  <title>FEY e.V. Nature Warriors | Free European Youth e.V.</title>
+  <meta name="description" content="Free European Youth e.V. organized a workshop that brings together passionate volunteers and local members to tackle environmental degradation through direct action." />
+  <meta name="keywords" content="FEY e.V. Nature Warriors, Mersin, protect nature, zero waste, Free European Youth, volunteer, environmental, nature" />
+  <meta property="og:title" content="FEY e.V. Nature Warriors | Free European Youth e.V." />
+  <meta property="og:description" content="7 volunteers strengthening their commitment to the environment and establishing a solid foundation for future local projects" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.freeeuropeanyouth.eu/events/event5.html" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Structured Data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "FEY e.V. Nature Warriors",
+  "description": "Transforming environmental awareness into direct local action for a greener and more sustainable future.",
+  "startDate": "2024-02-01",
+  "location": {
+    "@type": "Place",
+    "name": "Mersin",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mersin",
+      "addressCountry": "TR"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Free European Youth e.V.",
+    "url": "https://www.freeeuropeanyouth.eu"
+  },
+  "url": "https://www.freeeuropeanyouth.eu/events/event5.html"
+}
+</script>
+  
+  <style>
+    /* ── DİL SEÇİCİ ── */
+    .lang-switcher { display:flex; align-items:center; gap:6px; }
+
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-family: var(--font-head);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 2px solid var(--gray-200);
+      background: var(--white);
+      color: var(--gray-800);
+      transition: all 0.25s;
+      text-decoration: none;
+    }
+    .lang-btn:hover,
+    .lang-btn.active {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--gray-100);
+    }
+
+    /* CSS bayraklar — font bağımsız, her tarayıcıda çalışır */
+    .flag-icon {
+      display: inline-block;
+      width: 18px;
+      height: 13px;
+      border-radius: 2px;
+      overflow: hidden;
+      flex-shrink: 0;
+      vertical-align: middle;
+      position: relative;
+    }
+    .flag-gb {
+      background: #012169;
+    }
+    .flag-gb::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom right, transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px)),
+        linear-gradient(to bottom left,  transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px));
+    }
+    .flag-gb::after {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(to bottom left,  transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(#fff 0 0) center / 4px 100% no-repeat,
+        linear-gradient(#fff 0 0) center / 100% 4px no-repeat;
+    }
+    .flag-de {
+      background: linear-gradient(to bottom, #000 33.3%, #D00 33.3% 66.6%, #FFCE00 66.6%);
+    }
+
+    /* Mobilde hamburger içi dil seçici */
+    .lang-switcher-mobile {
+      display: none;
+      margin-top: 8px;
+      padding-top: 12px;
+      border-top: 1px solid var(--gray-200);
+    }
+    @media (max-width: 768px) {
+      .lang-switcher-desktop { display: none !important; }
+      .lang-switcher-mobile  { display: flex !important; }
+    }
+
+    /* Google Translate araç çubuğunu gizle */
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+
+    /* ── HEADER'I KÖŞELERE YAY ── */
+    .header-inner {
+      max-width: 100% !important;
+      padding-left: 48px !important;
+      padding-right: 48px !important;
+    }
+    @media (max-width: 768px) {
+      .header-inner {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+    }
+
+    /* Logo "Youth" span rengi */
+    .logo .logo-text span { color: #d4a017 !important; }
+
+    /* Header sosyal ikonlar — renkli yuvarlak */
+    .header-social .social-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      color: #fff !important;
+      text-decoration: none;
+      transition: transform 0.18s, opacity 0.18s;
+    }
+    .header-social .social-icon:hover { transform: scale(1.1); opacity: 0.88; }
+    .header-social .social-icon.yt { background: #ff0000; }
+    .header-social .social-icon.ig { background: linear-gradient(135deg,#f09433,#dc2743,#bc1888); }
+    .header-social .social-icon.fb { background: #1877f2; }
+  </style>
 </head>
 <body>
 
+  <!-- Google Translate container — gizli, zorunlu -->
+  <div id="gt-container" style="display:none;"></div>
+
   <!-- HEADER -->
-  <header class="site-header">
-    <div class="header-inner">
+<!-- UPDATED HEADER NAVIGATION -->
+<header class="site-header">
+  <div class="header-inner">
 
-      <!-- LOGO — events klasöründe olduğu için ../ ile bir üst klasöre çıkıyoruz -->
-      <a href="../index.html" class="logo">
-        <img src="../images/FEY logo.jpg" alt="Free European Youth e.V." style="height:44px;width:auto;">
-        <div class="logo-text">Free European <span>Youth</span></div>
-      </a>
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+      <img src="../images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:44px;border-radius:50%;object-fit:cover;">
+      <div class="logo-text">Free European <span>Youth e.V</span></div>
+    </a>
 
-      <nav class="main-nav">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="../projects.html">Projects</a>
-        <a href="../events.html" class="active">Events</a>
-        <a href="../team.html">Team</a>
-        <a href="../gallery.html">Gallery</a>
-        <a href="../contact.html">Contact</a>
-      </nav>
+    <!-- NAVIGATION -->
+    <nav class="main-nav" role="navigation" aria-label="Main navigation">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../projects.html">Projects</a>
+      <a href="../events.html">Events</a>
+      <a href="../news.html">News</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../team.html">Team</a>
+      <a href="../contact.html">Contact</a>
 
-      <div class="header-social">
-        <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-        <button class="hamburger"><span></span><span></span><span></span></button>
+      <!-- Mobile language switcher (in hamburger menu) -->
+      <div class="lang-switcher lang-switcher-mobile">
+        <button class="lang-btn active" id="btn-en-m" onclick="switchLang('en')">
+          <span class="flag-icon flag-gb"></span> EN
+        </button>
+        <button class="lang-btn" id="btn-de-m" onclick="switchLang('de')">
+          <span class="flag-icon flag-de"></span> DE
+        </button>
+      </div>
+    </nav>
+
+    <!-- SOCIAL + LANGUAGE SWITCHER + HAMBURGER -->
+    <div class="header-social" style="display:flex;align-items:center;gap:10px;">
+      
+      <!-- Desktop language switcher -->
+      <div class="lang-switcher lang-switcher-desktop">
+        <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">
+          <span class="flag-icon flag-gb"></span> EN
+        </button>
+        <button class="lang-btn" id="btn-de" onclick="switchLang('de')">
+          <span class="flag-icon flag-de"></span> DE
+        </button>
       </div>
 
+      <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <!-- Hamburger button -->
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+
+  </div>
+</header>
 
 
   <!-- PAGE HEADER -->
@@ -170,66 +355,127 @@
 
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-
-        <div class="footer-brand">
-          <!-- LOGO — footer'da da ../ ile üst klasöre çıkıyoruz -->
-          <a href="../index.html" class="logo" style="margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;">
-            <img src="../images/FEY logo.jpg" alt="Free European Youth e.V." style="height:40px;width:auto;">
-            <div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div>
-          </a>
-          <p>A German-registered NGO connecting migrant and local youth across Europe through Erasmus+ projects since 2020.</p>
-          <div class="footer-social">
-            <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-          </div>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="logo" style="margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;">
+          <img src="../images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:44px;border-radius:50%;object-fit:cover;flex-shrink:0;">
+          <div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div>
+        </a>
+        <p>A German-registered NGO connecting migrant and local youth across Europe through activities and non-formal education since 2020.</p>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
         </div>
-
-        <div class="footer-col">
-          <h4>Navigate</h4>
-          <div class="footer-links">
-            <a href="../index.html">Home</a>
-            <a href="../about.html">About Us</a>
-            <a href="../projects.html">Projects</a>
-            <a href="../events.html">Events</a>
-            <a href="../team.html">Team</a>
-            <a href="../gallery.html">Gallery</a>
-            <a href="../contact.html">Contact</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Focus Areas</h4>
-          <div class="footer-links">
-            <a href="../about.html">Social Inclusion</a>
-            <a href="../about.html">Sustainability</a>
-            <a href="../about.html">Digital Skills</a>
-            <a href="../about.html">Youth Employability</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact</h4>
-          <div class="footer-links">
-            <a href="mailto:info@freeeuropeanyouth.eu">info@freeeuropeanyouth.eu</a>
-            <a href="../contact.html">Send a message</a>
-          </div>
-          <div style="margin-top:20px;">
-            <span class="footer-oid">OID: E10307717</span>
-          </div>
-        </div>
-
       </div>
-      <div class="footer-bottom">
-        <span>© 2025 Free European Youth e.V. All rights reserved.</span>
-        <span>Registered NGO in Germany</span>
-      </div>
+      <div class="footer-col"><h4>Navigate</h4><div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About Us</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../events.html">Events</a>
+        <a href="../news.html">News</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../team.html">Team</a>
+        <a href="../contact.html">Contact</a>
+      </div></div>
+      <div class="footer-col"><h4>Focus Areas</h4><div class="footer-links">
+        <a href="../about.html">Social Inclusion</a>
+        <a href="../about.html">Sustainability</a>
+        <a href="../about.html">Digital Skills</a>
+        <a href="../about.html">Youth Employability</a>
+        <a href="../about.html">Well-being</a>
+      </div></div>
+      <div class="footer-col"><h4>Contact</h4><div class="footer-links">
+        <a href="mailto:info@freeeuropeanyouth.eu">info@freeeuropeanyouth.eu</a>
+        <a href="https://wa.me/492212919790">+49 221 29197905</a>
+        <a href="../contact.html">Send a message</a>
+      </div><div style="margin-top:20px;"><span class="footer-oid">OID: E10307717</span></div></div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <span>© 2025 Free European Youth e.V. All rights reserved.</span>
+      <span>Registered Non-Profit NGO · VR 6280</span>
+    </div>
+  </div>
+</footer>
 
   <script src="../js/script.js"></script>
+
+  <script>
+    /* ===== DİL DEĞİŞTİRİCİ ===== */
+    var currentLang = 'en';
+
+    function setActiveButtons(lang) {
+      ['btn-en','btn-de','btn-en-m','btn-de-m'].forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.classList.remove('active');
+      });
+      var ids = lang === 'en' ? ['btn-en','btn-en-m'] : ['btn-de','btn-de-m'];
+      ids.forEach(function(id) { var el = document.getElementById(id); if (el) el.classList.add('active'); });
+    }
+
+    function triggerDE() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) { sel.value = 'de'; sel.dispatchEvent(new Event('change')); }
+    }
+
+    function restoreEN() {
+      /* 1) combo kutusundan en'e çek */
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) { sel.value = 'en'; sel.dispatchEvent(new Event('change')); }
+
+      /* 2) Google'ın gizli iframe'indeki restore butonunu tıkla */
+      setTimeout(function() {
+        try {
+          var iframes = document.querySelectorAll('iframe.goog-te-banner-frame, iframe[name="googleTranslateIframe"]');
+          iframes.forEach(function(f) {
+            try {
+              var doc = f.contentDocument || (f.contentWindow && f.contentWindow.document);
+              if (!doc) return;
+              var restore = doc.querySelector('[id*="restore"]') || doc.querySelector('.goog-close-link');
+              if (restore) restore.click();
+            } catch(e) {}
+          });
+        } catch(e) {}
+
+        /* 3) Hâlâ Almancaysa cookie temizle + reload (son çare) */
+        var combo = document.querySelector('.goog-te-combo');
+        if (combo && combo.value && combo.value !== 'en') {
+          document.cookie = 'googtrans=/en/en; path=/';
+          document.cookie = 'googtrans=/en/en; path=/; domain=.' + location.hostname;
+          location.reload();
+        }
+      }, 600);
+    }
+
+    function switchLang(lang) {
+      if (lang === currentLang) return;
+      currentLang = lang;
+      setActiveButtons(lang);
+
+      if (lang === 'de') {
+        if (!document.getElementById('gt-script')) {
+          window.googleTranslateInit = function() {
+            new google.translate.TranslateElement({
+              pageLanguage: 'en',
+              includedLanguages: 'de',
+              autoDisplay: false
+            }, 'gt-container');
+            setTimeout(triggerDE, 900);
+          };
+          var s = document.createElement('script');
+          s.id = 'gt-script';
+          s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit';
+          document.body.appendChild(s);
+        } else {
+          triggerDE();
+        }
+      } else {
+        restoreEN();
+      }
+    }
+  </script>
+
 </body>
 </html>
