@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️ 1) BAŞLIK — her haber için değiştir -->
+  <title>Free Webinar – Digital Practices on Environmental Activities – Free European Youth e.V.</title>
+  <meta name="description" content="Join our free webinar, Digital Practices on Environmental Activities, and discover practical digital tools for greener, more innovative projects." />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <style>
+    /* ── DİL SEÇİCİ ── */
+    .lang-switcher { display:flex; align-items:center; gap:6px; }
+    .lang-btn {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 5px 10px; border-radius: 8px;
+      font-family: var(--font-head); font-size: 0.82rem; font-weight: 700;
+      cursor: pointer; border: 2px solid var(--gray-200);
+      background: var(--white); color: var(--gray-800);
+      transition: all 0.25s; text-decoration: none;
+    }
+    .lang-btn:hover, .lang-btn.active {
+      border-color: var(--blue); color: var(--blue); background: var(--gray-100);
+    }
+    .flag-icon {
+      display: inline-block; width: 18px; height: 13px; border-radius: 2px;
+      overflow: hidden; flex-shrink: 0; vertical-align: middle; position: relative;
+    }
+    .flag-gb { background: #012169; }
+    .flag-gb::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom right, transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px)),
+        linear-gradient(to bottom left,  transparent calc(50% - 1.5px), #fff calc(50% - 1.5px), #fff calc(50% + 1.5px), transparent calc(50% + 1.5px));
+    }
+    .flag-gb::after {
+      content: ''; position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(to bottom left,  transparent calc(50% - 1px), #C8102E calc(50% - 1px), #C8102E calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(#fff 0 0) center / 4px 100% no-repeat,
+        linear-gradient(#fff 0 0) center / 100% 4px no-repeat;
+    }
+    .flag-de { background: linear-gradient(to bottom, #000 33.3%, #D00 33.3% 66.6%, #FFCE00 66.6%); }
+
+    .lang-switcher-mobile {
+      display: none;
+      padding: 12px 16px;
+      border-top: 1px solid var(--gray-200);
+      margin-top: 4px;
+    }
+    @media (max-width: 768px) {
+      .lang-switcher-desktop { display: none !important; }
+      .main-nav.open .lang-switcher-mobile { display: flex !important; }
+    }
+    @media (max-width: 768px) {
+      .logo img { height: 36px !important; width: 36px !important; }
+      .logo-text { font-size: 0.88rem !important; line-height: 1.2 !important; }
+    }
+    @media (max-width: 400px) {
+      .logo-text { font-size: 0.78rem !important; }
+      .logo img  { height: 30px !important; width: 30px !important; }
+    }
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+
+    .header-inner {
+      max-width: 100% !important;
+      padding-left: 48px !important;
+      padding-right: 48px !important;
+    }
+    @media (max-width: 768px) {
+      .header-inner { padding-left: 16px !important; padding-right: 16px !important; }
+    }
+    .logo .logo-text span { color: #d4a017 !important; }
+    .header-social .social-icon {
+      width: 32px; height: 32px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 13px; color: #fff !important; text-decoration: none;
+      transition: transform 0.18s, opacity 0.18s;
+    }
+    .header-social .social-icon:hover { transform: scale(1.1); opacity: 0.88; }
+    .header-social .social-icon.yt { background: #ff0000; }
+    .header-social .social-icon.ig { background: linear-gradient(135deg,#f09433,#dc2743,#bc1888); }
+    .header-social .social-icon.fb { background: #1877f2; }
+
+    /* ── ARTICLE LAYOUT ── */
+    .article-wrapper {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 270px;
+      gap: 40px;
+      align-items: start;
+    }
+
+    /* ── CLICKABLE PHOTO GALLERY ── */
+    .article-gallery {
+      position: relative;
+      width: 100%;
+      min-height: 430px;
+      margin-bottom: 38px;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #e8efff, #d9e5ff);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .gallery-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+      cursor: zoom-in;
+    }
+
+    .gallery-slide.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .gallery-slide img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-placeholder {
+      width: 100%;
+      min-height: 430px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 30px;
+      text-align: center;
+      color: #5c76ad;
+    }
+
+    .gallery-placeholder i { font-size: 3rem; }
+    .gallery-placeholder code {
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: rgba(0,51,153,0.08);
+      color: var(--blue-dark);
+      font-size: 0.82rem;
+    }
+
+    .gallery-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(0, 27, 92, 0.72);
+      color: #fff;
+      cursor: pointer;
+      transform: translateY(-50%);
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .gallery-arrow:hover {
+      background: var(--blue);
+      transform: translateY(-50%) scale(1.06);
+    }
+
+    .gallery-arrow.prev { left: 16px; }
+    .gallery-arrow.next { right: 16px; }
+
+    .gallery-counter {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 5;
+      padding: 6px 11px;
+      border-radius: 50px;
+      background: rgba(0, 27, 92, 0.76);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    /* Full-screen image viewer */
+    .gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      background: rgba(0, 13, 45, 0.94);
+    }
+
+    .gallery-lightbox.open { display: flex; }
+
+    .gallery-lightbox img {
+      max-width: min(1100px, 90vw);
+      max-height: 86vh;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .lightbox-close,
+    .lightbox-arrow {
+      position: fixed;
+      z-index: 10000;
+      border: 0;
+      color: #fff;
+      background: rgba(255,255,255,0.14);
+      cursor: pointer;
+    }
+
+    .lightbox-close {
+      top: 18px;
+      right: 22px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      font-size: 1.35rem;
+    }
+
+    .lightbox-arrow {
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+    }
+
+    .lightbox-arrow.prev { left: 22px; }
+    .lightbox-arrow.next { right: 22px; }
+
+    .article-meta { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .news-tag {
+      display: inline-block; font-family: var(--font-head); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 50px;
+      background: rgba(0,51,153,0.09); color: var(--blue);
+    }
+    .news-tag.gold  { background: rgba(245,197,24,0.15); color: #a07a00; }
+    .news-tag.green { background: rgba(46,139,87,0.12);  color: var(--green); }
+    .article-date, .article-author { font-size: 0.88rem; color: var(--gray-500); display: flex; align-items: center; gap: 5px; }
+
+    .article-lead {
+      font-size: 1.15rem; color: var(--gray-600, #4b5563); line-height: 1.7;
+      margin-bottom: 32px; padding-bottom: 32px; border-bottom: 2px solid var(--gray-100); font-weight: 500;
+    }
+
+    .article-body { font-size: 1rem; line-height: 1.85; color: var(--gray-800); }
+    .article-body p  { margin-bottom: 20px; }
+    .article-body h2 { font-size: 1.4rem; margin: 36px 0 14px; color: var(--blue-dark); }
+    .article-body h3 { font-size: 1.15rem; margin: 28px 0 10px; }
+    .article-body ul, .article-body ol { padding-left: 24px; margin-bottom: 20px; }
+    .article-body li { margin-bottom: 8px; }
+    .article-body blockquote {
+      border-left: 4px solid var(--blue); padding: 16px 24px;
+      background: rgba(0,51,153,0.04); border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 28px 0; font-style: italic; color: var(--gray-600, #4b5563);
+    }
+    .article-body img { width: 100%; border-radius: var(--radius); margin: 24px 0; }
+    .article-body a  { color: var(--blue); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+    .share-row {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      margin-top: 40px; padding-top: 28px; border-top: 2px solid var(--gray-100);
+    }
+    .share-label { font-family: var(--font-head); font-size: 0.85rem; font-weight: 700; color: var(--gray-500); }
+    .share-btn {
+      display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px;
+      border-radius: 50px; font-family: var(--font-head); font-size: 0.82rem; font-weight: 700;
+      text-decoration: none; transition: all var(--transition);
+    }
+    .share-btn.fb { background:#1877f2; color:#fff; }
+    .share-btn.wa { background:#25d366; color:#fff; }
+    .share-btn.lk { background:#0a66c2; color:#fff; }
+    .share-btn:hover { opacity: 0.85; transform: translateY(-2px); }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 100px; }
+    .sidebar-box { background: var(--white); border: 1.5px solid var(--gray-200); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 24px; }
+    .sidebar-box h4 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-500); margin-bottom: 16px; font-family: var(--font-head); }
+
+    .related-item {
+      display: flex; gap: 12px; align-items: flex-start;
+      padding: 12px 0; border-bottom: 1px solid var(--gray-100);
+      text-decoration: none; color: inherit; transition: color var(--transition);
+    }
+    .related-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .related-item:hover h5  { color: var(--blue); }
+    .related-thumb {
+      width: 56px; height: 56px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.4); font-size: 1.2rem; overflow: hidden;
+    }
+    .related-thumb img { width:100%; height:100%; object-fit:cover; }
+    .related-item h5 { font-size: 0.88rem; line-height: 1.35; margin-bottom: 4px; transition: color var(--transition); }
+    .related-item span { font-size: 0.78rem; color: var(--gray-500); }
+
+    .sidebar-social a {
+      display: flex; align-items: center; gap: 10px; padding: 10px 14px;
+      border-radius: var(--radius); font-family: var(--font-head); font-size: 0.88rem;
+      font-weight: 700; text-decoration: none; margin-bottom: 8px;
+      transition: opacity var(--transition); color: #fff;
+    }
+    .sidebar-social a:hover { opacity: 0.85; }
+    .sidebar-social a.ig { background: linear-gradient(135deg,#f09433,#dc2743,#bc1888); }
+    .sidebar-social a.fb { background: #1877f2; }
+    .sidebar-social a.yt { background: #ff0000; }
+
+    @media (max-width: 900px) {
+      .article-wrapper { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+    }
+    @media (max-width: 600px) {
+      .article-gallery,
+      .gallery-slide img,
+      .gallery-placeholder { min-height: 280px; }
+      .gallery-arrow { width: 40px; height: 40px; }
+      .gallery-lightbox { padding: 16px; }
+      .lightbox-arrow { width: 42px; height: 42px; }
+      .lightbox-arrow.prev { left: 8px; }
+      .lightbox-arrow.next { right: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="gt-container" style="display:none;"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img src="../images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:44px;border-radius:50%;object-fit:cover;">
+        <div class="logo-text">Free European <span>Youth e.V</span></div>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../events.html">Events</a>
+        <a href="../news.html" class="active">News</a>
+        <a href="../resources.html">Resources</a>
+        <a href="../team.html">Team</a>
+        <a href="../contact.html">Contact</a>
+        <div class="lang-switcher lang-switcher-mobile">
+          <button id="btn-en-m" class="lang-btn active" onclick="switchLang('en')"><span class="flag-icon flag-gb"></span> EN</button>
+          <button id="btn-de-m" class="lang-btn" onclick="switchLang('de')"><span class="flag-icon flag-de"></span> DE</button>
+        </div>
+      </nav>
+
+      <div class="header-social">
+        <div class="lang-switcher lang-switcher-desktop">
+          <button id="btn-en" class="lang-btn active" onclick="switchLang('en')"><span class="flag-icon flag-gb"></span> EN</button>
+          <button id="btn-de" class="lang-btn" onclick="switchLang('de')"><span class="flag-icon flag-de"></span> DE</button>
+        </div>
+        <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB / HERO -->
+  <section style="background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 60%,var(--blue-light) 100%);padding:64px 0 82px;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;pointer-events:none;">
+      <div style="position:absolute;width:430px;height:430px;border-radius:50%;background:rgba(255,255,255,0.05);top:-130px;right:-70px;"></div>
+      <div style="position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,0.04);bottom:-130px;left:5%;"></div>
+    </div>
+
+    <div class="container" style="position:relative;z-index:1;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px;flex-wrap:wrap;">
+        <a href="../index.html" style="color:rgba(255,255,255,0.65);font-size:0.88rem;text-decoration:none;">Home</a>
+        <span style="color:rgba(255,255,255,0.4);">/</span>
+        <a href="../news.html" style="color:rgba(255,255,255,0.65);font-size:0.88rem;text-decoration:none;">News</a>
+        <span style="color:rgba(255,255,255,0.4);">/</span>
+        <!-- ✏️ 2) BREADCRUMB — kısa haber adı -->
+        <span style="color:rgba(255,255,255,0.92);font-size:0.88rem;">Free Webinar: Digital Practices on Environmental Activities</span>
+      </div>
+
+      <!-- ✏️ 3) KATEGORİ -->
+      <span class="section-label" style="background:rgba(255,255,255,0.15);color:#fff;">
+        <i class="fas fa-leaf" style="margin-right:6px;"></i> Webinar
+      </span>
+
+      <!-- ✏️ 4) HABER BAŞLIĞI -->
+      <h1 style="color:var(--white);margin-top:18px;margin-bottom:16px;font-size:clamp(2rem,4.5vw,3.4rem);max-width:900px;line-height:1.12;">
+        Free Webinar – Digital Practices on Environmental Activities
+      </h1>
+
+      <!-- ✏️ 5) KISA ÖZET -->
+      <p style="color:rgba(255,255,255,0.84);max-width:760px;font-size:1.08rem;line-height:1.7;margin-bottom:24px;">
+        Join our free webinar, “Digital Practices on Environmental Activities,” and explore how digital tools can strengthen eco-friendly projects, improve collaboration, and support meaningful environmental action.
+      </p>
+
+      <!-- ✏️ 6) TARİH / OKUMA SÜRESİ / YAZAR -->
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:rgba(255,255,255,0.88);font-size:0.88rem;">
+        <span><i class="fas fa-calendar-alt" style="margin-right:6px;"></i> July 22, 2026</span>
+        <span><i class="fas fa-clock" style="margin-right:6px;"></i> 3 min read</span>
+        <span><i class="fas fa-user" style="margin-right:6px;"></i> FEY Communications Team</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+  <section class="section">
+    <div class="container">
+      <div class="article-wrapper">
+
+        <!-- ── ANA İÇERİK ── -->
+        <article>
+
+          <!-- ✏️ 7) FOTOĞRAF GALERİSİ
+               Aşağıdaki üç img yolunu değiştirmen yeterli.
+               Yalnızca iki fotoğraf kullanacaksan üçüncü .gallery-slide bloğunu silebilirsin. -->
+          <div class="article-gallery" id="articleGallery">
+
+            <div class="gallery-slide active">
+              <img src="../images/news/environmental-webinar-1.png"
+                   alt="Digital Practices on Environmental Activities webinar"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="gallery-placeholder" style="display:none;">
+                <i class="fas fa-images"></i>
+              </div>
+            </div>
+
+            <div class="gallery-slide">
+              <img src="../images/news/environmental-webinar-2.png"
+                   alt="Digital Practices on Environmental Activities webinar"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="gallery-placeholder" style="display:none;">
+                <i class="fas fa-images"></i>
+              </div>
+            </div>
+
+            <div class="gallery-slide">
+              <img src="../images/news/environmental-webinar-3.png"
+                   alt="Digital Practices on Environmental Activities webinar"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="gallery-placeholder" style="display:none;">
+                <i class="fas fa-images"></i>
+              </div>
+            </div>
+
+              <div class="gallery-slide">
+              <img src="../images/news/environmental-webinar-4.png"
+                   alt="Digital Practices on Environmental Activities webinar"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+              <div class="gallery-placeholder" style="display:none;">
+                <i class="fas fa-images"></i>
+              </div>
+            </div>
+
+            <button class="gallery-arrow prev" type="button" aria-label="Previous photo">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="gallery-arrow next" type="button" aria-label="Next photo">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <span class="gallery-counter">1 / 4</span>
+          </div>
+
+          <!-- ✏️ 8) HABER İÇERİĞİ -->
+          <div class="article-body">
+
+            <p>
+              Free European Youth e.V. invites young people, youth workers, educators, project coordinators, and anyone interested in sustainability to join our free webinar, <strong>“Digital Practices on Environmental Activities.”</strong> The session will explore practical ways to use digital tools in environmental education, awareness campaigns, community initiatives, and youth-led green projects.
+            </p>
+
+            <h2>How Can Digital Tools Support Environmental Action?</h2>
+
+            <p>
+              Digital platforms can make environmental activities more accessible, interactive, and impactful. During the webinar, participants will discover how online collaboration tools, digital storytelling, mapping applications, data collection platforms, and social media can be used to plan activities, engage communities, share results, and inspire sustainable behaviour.
+            </p>
+
+            <p>
+              The webinar will also highlight simple methods for creating greener project workflows. From reducing unnecessary printing to organizing online meetings and collecting feedback digitally, small changes can help teams lower their environmental footprint while working more efficiently.
+            </p>
+
+            <h2>What Will Participants Learn?</h2>
+
+            <ul>
+              <li>How to select useful digital tools for environmental and sustainability projects</li>
+              <li>Ways to design engaging online activities for young people and local communities</li>
+              <li>Practical ideas for digital campaigns, storytelling, mapping, and awareness raising</li>
+              <li>Tips for making project management and communication more sustainable</li>
+              <li>How to turn digital participation into real-world environmental action</li>
+            </ul>
+
+            <h2>Who Should Join?</h2>
+
+            <p>
+              The session is open to youth workers, NGO representatives, educators, volunteers, students, project partners, and environmentally conscious individuals. No advanced technical knowledge is required. The webinar is designed to be practical, accessible, and useful for both beginners and experienced project teams.
+            </p>
+
+            <p>
+              Participation is free, but registration is required. Secure your place and join us to exchange ideas, discover new tools, and explore how digital innovation can contribute to a more sustainable future.
+            </p>
+
+            <blockquote>
+              “Use digital innovation to strengthen environmental action, connect communities, and create lasting change for the planet.”
+            </blockquote>
+
+            <p>
+              <strong>Register now and be part of the conversation.</strong> Further participation details and the webinar access link will be shared with registered participants.
+            </p>
+
+          </div>
+
+          <!-- Paylaş -->
+          <div class="share-row">
+            <span class="share-label"><i class="fas fa-share-alt"></i> Share:</span>
+            <!-- ✏️ URL'leri bu haberin gerçek adresiyle güncelle -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://freeeuropeanyouth.eu/news/digital-practices-environmental-activities-webinar.html"
+               target="_blank" class="share-btn fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+            <a href="https://wa.me/?text=https://freeeuropeanyouth.eu/news/digital-practices-environmental-activities-webinar.html"
+               target="_blank" class="share-btn wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://freeeuropeanyouth.eu/news/digital-practices-environmental-activities-webinar.html"
+               target="_blank" class="share-btn lk"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          </div>
+
+          <!-- Geri dön -->
+          <div style="margin-top:32px;">
+            <a href="../news.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Back to News</a>
+          </div>
+
+        </article>
+
+        <!-- ── SIDEBAR: yalnızca sosyal medya ── -->
+        <aside class="sidebar">
+          <div class="sidebar-box">
+            <h4>Follow Us</h4>
+            <div class="sidebar-social">
+              <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="ig"><i class="fab fa-instagram"></i> Instagram</a>
+              <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="fb"><i class="fab fa-facebook-f"></i> Facebook</a>
+              <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="yt"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PHOTO LIGHTBOX -->
+  <div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" aria-label="Close photo">
+      <i class="fas fa-times"></i>
+    </button>
+    <button class="lightbox-arrow prev" type="button" aria-label="Previous photo">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <img src="" alt="Enlarged news photo" id="lightboxImage">
+    <button class="lightbox-arrow next" type="button" aria-label="Next photo">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container" style="position:relative;z-index:1;">
+      <h2 class="animate-on-scroll">Stay Connected</h2>
+      <p class="animate-on-scroll delay-1">Follow us on social media for the latest updates, project news and opportunities.</p>
+      <div class="cta-buttons animate-on-scroll delay-2">
+        <a href="../events.html" class="btn btn-white"><i class="fas fa-calendar"></i> Upcoming Events</a>
+        <a href="../contact.html" class="btn btn-outline" style="border-color:rgba(255,255,255,.4);color:#fff;"><i class="fas fa-envelope"></i> Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" style="margin-bottom:18px;display:inline-flex;align-items:center;gap:12px;">
+            <img src="../images/FEY.png" alt="Free European Youth e.V." style="height:44px;width:auto;">
+            <div class="logo-text" style="color:#fff;">Free European <span>Youth</span></div>
+          </a>
+          <p>A German-registered NGO connecting migrant and local youth across Europe through Erasmus+ projects and non-formal education since 2020.</p>
+          <div class="footer-social">
+            <a href="https://www.youtube.com/@FreeEuropeanYouth" target="_blank" rel="noopener" class="social-icon yt"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/freeeuropeanyouth/" target="_blank" rel="noopener" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61571811701048" target="_blank" rel="noopener" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigate</h4><div class="footer-links">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About Us</a>
+          <a href="../projects.html">Projects</a>
+          <a href="../events.html">Events</a>
+          <a href="../news.html">News</a>
+          <a href="../resources.html">Resources</a>
+          <a href="../team.html">Team</a>
+          <a href="../contact.html">Contact</a>
+        </div></div>
+        <div class="footer-col"><h4>Focus Areas</h4><div class="footer-links">
+          <a href="../about.html">Social Inclusion</a>
+          <a href="../about.html">Sustainability</a>
+          <a href="../about.html">Digital Skills</a>
+          <a href="../about.html">Youth Employability</a>
+          <a href="../about.html">Well-being</a>
+          <a href="../about.html">Intercultural Exchange</a>
+        </div></div>
+        <div class="footer-col"><h4>Contact</h4><div class="footer-links">
+          <a href="mailto:info@freeeuropeanyouth.eu">info@freeeuropeanyouth.eu</a>
+          <a href="https://wa.me/492212919790">+49 221 29197905</a>
+          <a href="../contact.html">Send a message</a>
+          <span class="footer-oid">OID: E10307717</span>
+        </div></div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Free European Youth e.V. All rights reserved.</span>
+        <span>Registered Non-Profit NGO · VR 6280</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script>
+    var currentLang = 'en';
+    function setActiveButtons(lang) {
+      ['btn-en','btn-de','btn-en-m','btn-de-m'].forEach(function(id) {
+        var el = document.getElementById(id); if (el) el.classList.remove('active');
+      });
+      var ids = lang === 'en' ? ['btn-en','btn-en-m'] : ['btn-de','btn-de-m'];
+      ids.forEach(function(id) { var el = document.getElementById(id); if (el) el.classList.add('active'); });
+    }
+    function triggerDE() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) { sel.value = 'de'; sel.dispatchEvent(new Event('change')); }
+    }
+    function restoreEN() {
+      var sel = document.querySelector('.goog-te-combo');
+      if (sel) { sel.value = 'en'; sel.dispatchEvent(new Event('change')); }
+      setTimeout(function() {
+        try {
+          var iframes = document.querySelectorAll('iframe.goog-te-banner-frame');
+          iframes.forEach(function(f) {
+            try { var doc = f.contentDocument; if (!doc) return; var r = doc.querySelector('.goog-close-link'); if (r) r.click(); } catch(e) {}
+          });
+        } catch(e) {}
+        var combo = document.querySelector('.goog-te-combo');
+        if (combo && combo.value !== 'en') { document.cookie = 'googtrans=/en/en; path=/'; location.reload(); }
+      }, 600);
+    }
+    function switchLang(lang) {
+      if (lang === currentLang) return;
+      currentLang = lang; setActiveButtons(lang);
+      if (lang === 'de') {
+        if (!document.getElementById('gt-script')) {
+          window.googleTranslateInit = function() { new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'de', autoDisplay: false }, 'gt-container'); setTimeout(triggerDE, 900); };
+          var s = document.createElement('script'); s.id = 'gt-script'; s.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateInit'; document.body.appendChild(s);
+        } else { triggerDE(); }
+      } else { restoreEN(); }
+    }
+  
+    /* ── PHOTO GALLERY ── */
+    (function() {
+      var gallery = document.getElementById('articleGallery');
+      var lightbox = document.getElementById('galleryLightbox');
+      if (!gallery || !lightbox) return;
+
+      var slides = Array.prototype.slice.call(gallery.querySelectorAll('.gallery-slide'));
+      var counter = gallery.querySelector('.gallery-counter');
+      var current = 0;
+      var lightboxImage = document.getElementById('lightboxImage');
+
+      function validImage(slide) {
+        var img = slide.querySelector('img');
+        return img && img.style.display !== 'none' && img.getAttribute('src');
+      }
+
+      function showSlide(index) {
+        current = (index + slides.length) % slides.length;
+        slides.forEach(function(slide, i) {
+          slide.classList.toggle('active', i === current);
+        });
+        counter.textContent = (current + 1) + ' / ' + slides.length;
+      }
+
+      function changeSlide(step) {
+        showSlide(current + step);
+        if (lightbox.classList.contains('open')) updateLightbox();
+      }
+
+      function updateLightbox() {
+        var img = slides[current].querySelector('img');
+        if (!validImage(slides[current])) return;
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt || 'News photo';
+      }
+
+      function openLightbox() {
+        if (!validImage(slides[current])) return;
+        updateLightbox();
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      gallery.querySelector('.gallery-arrow.prev').addEventListener('click', function(e) {
+        e.stopPropagation();
+        changeSlide(-1);
+      });
+
+      gallery.querySelector('.gallery-arrow.next').addEventListener('click', function(e) {
+        e.stopPropagation();
+        changeSlide(1);
+      });
+
+      slides.forEach(function(slide) {
+        slide.addEventListener('click', openLightbox);
+      });
+
+      lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+      lightbox.querySelector('.lightbox-arrow.prev').addEventListener('click', function() { changeSlide(-1); });
+      lightbox.querySelector('.lightbox-arrow.next').addEventListener('click', function() { changeSlide(1); });
+
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', function(e) {
+        if (lightbox.classList.contains('open')) {
+          if (e.key === 'Escape') closeLightbox();
+          if (e.key === 'ArrowLeft') changeSlide(-1);
+          if (e.key === 'ArrowRight') changeSlide(1);
+        } else {
+          if (e.key === 'ArrowLeft') changeSlide(-1);
+          if (e.key === 'ArrowRight') changeSlide(1);
+        }
+      });
+
+      showSlide(0);
+    })();
+
+  </script>
+</body>
+</html>
